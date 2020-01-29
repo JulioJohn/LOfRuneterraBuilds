@@ -29,20 +29,29 @@
                                     <action selector="changeCardsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n5m-qe-uxU"/>
                                 </connections>
                             </button>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="TkH-IM-9DD">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="xaU-Jl-nye" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="6SX-Q3-bdo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NWZ-bk-6X5" secondAttribute="trailing" constant="66" id="BrN-cs-nOU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TkH-IM-9DD" secondAttribute="trailing" id="GZd-wQ-5vq"/>
                             <constraint firstItem="NWZ-bk-6X5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="704" id="YxX-lM-VP4"/>
                             <constraint firstItem="xaU-Jl-nye" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bfZ-h2-apS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TkH-IM-9DD" secondAttribute="bottom" constant="774" id="eaB-RX-gpu"/>
+                            <constraint firstItem="TkH-IM-9DD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="f8p-XX-ZWR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NWZ-bk-6X5" secondAttribute="bottom" constant="84" id="gin-E4-Nu2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="TkH-IM-9DD" secondAttribute="top" id="qrn-yL-mX7"/>
                             <constraint firstItem="NWZ-bk-6X5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="wfr-HM-FK6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="cardImageView" destination="xaU-Jl-nye" id="DwI-9K-ZFf"/>
+                        <outlet property="cardsSearchBar" destination="TkH-IM-9DD" id="r1U-sP-tKz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

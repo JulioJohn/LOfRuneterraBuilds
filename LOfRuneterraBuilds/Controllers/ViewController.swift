@@ -12,13 +12,17 @@ class ViewController: UIViewController {
     
     var myServices: LORService = LORService()
     var allGameCards: [Card]? = nil
+    var filteredCards: [Card]? = nil
     
     @IBOutlet weak var cardImageView: UIImageView!
     var changeCardsIndex: Int = 0
     
+    @IBOutlet weak var cardsSearchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        self.cardsSearchBar.delegate = self
         
         myServices.championLoadJson(filename: "set1-en_us") { (cards, error) in
             if error != nil { print(error) }
@@ -26,7 +30,7 @@ class ViewController: UIViewController {
                 self.allGameCards = cards
                 
                 DispatchQueue.main.async {
-                    
+                    self.cardImageView.image = UIImage(named: cards![0].cardCode)
                 }
             }
         }
@@ -36,11 +40,32 @@ class ViewController: UIViewController {
     
     @IBAction func changeCardsButton(_ sender: Any) {
         if let gameCards = self.allGameCards {
-            self.cardImageView.image = UIImage(named: "\(gameCards[changeCardsIndex].cardCode)") 
+            self.cardImageView.image = UIImage(named: "\(gameCards[changeCardsIndex].cardCode)")
             self.changeCardsIndex += 1
         } else {
             print("Não tem cartas")
         }
+    }
+}
+
+extension ViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty == false {
+            filteredCards = allGameCards
+            
+            allGameCards?.filter({ (card) -> Bool in
+                if card.name.contains(searchText) {
+                    cardImageView.image = UIImage(named: card.cardCode)
+                    return true
+                } else {
+                    return false
+                }
+            })
+        }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.cardsSearchBar.endEditing(true)
     }
 }
 
