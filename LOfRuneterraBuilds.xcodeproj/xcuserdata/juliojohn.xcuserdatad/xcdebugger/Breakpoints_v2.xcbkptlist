@@ -36,5 +36,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A4269A42-A15C-45CE-921D-7A0F8E8358F9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LOfRuneterraBuilds/Controllers/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A4269A42-A15C-45CE-921D-7A0F8E8358F9 - c5bfa72d63d1b871"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;LOfRuneterraBuilds.Card&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LOfRuneterraBuilds.ViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "LOfRuneterraBuilds"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliojohn/Desktop/LOfRuneterraBuilds/LOfRuneterraBuilds/Controllers/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "535">
+               </Location>
+               <Location
+                  uuid = "A4269A42-A15C-45CE-921D-7A0F8E8358F9 - e609af97f23a363"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;Swift.Array&lt;LOfRuneterraBuilds.Card&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LOfRuneterraBuilds.ViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "LOfRuneterraBuilds"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juliojohn/Desktop/LOfRuneterraBuilds/LOfRuneterraBuilds/Controllers/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "129">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
