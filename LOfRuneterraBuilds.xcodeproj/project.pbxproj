@@ -15,6 +15,9 @@
 		E7236AF523E0D193008A1178 /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7236AF423E0D193008A1178 /* ServerError.swift */; };
 		E784251D23E861B50026A28C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E784251C23E861B50026A28C /* CloudKit.framework */; };
 		E784252023EAE41D0026A28C /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784251F23EAE41D0026A28C /* Filter.swift */; };
+		E784252323EAFD800026A28C /* CardDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E784252223EAFD800026A28C /* CardDetails.storyboard */; };
+		E784252523EB39440026A28C /* CardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784252423EB39440026A28C /* CardDetailsViewController.swift */; };
+		E784252723EB4E550026A28C /* CardDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784252623EB4E550026A28C /* CardDetailTableViewCell.swift */; };
 		E7AE296E23E0979100EBD3A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE296D23E0979100EBD3A9 /* AppDelegate.swift */; };
 		E7AE297023E0979100EBD3A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE296F23E0979100EBD3A9 /* SceneDelegate.swift */; };
 		E7AE297223E0979100EBD3A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE297123E0979100EBD3A9 /* ViewController.swift */; };
@@ -36,6 +39,9 @@
 		E784251A23E861B00026A28C /* LOfRuneterraBuilds.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LOfRuneterraBuilds.entitlements; sourceTree = "<group>"; };
 		E784251C23E861B50026A28C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		E784251F23EAE41D0026A28C /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		E784252223EAFD800026A28C /* CardDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardDetails.storyboard; sourceTree = "<group>"; };
+		E784252423EB39440026A28C /* CardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewController.swift; sourceTree = "<group>"; };
+		E784252623EB4E550026A28C /* CardDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailTableViewCell.swift; sourceTree = "<group>"; };
 		E7AE296A23E0979100EBD3A9 /* LOfRuneterraBuilds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOfRuneterraBuilds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7AE296D23E0979100EBD3A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7AE296F23E0979100EBD3A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +73,7 @@
 				42052C6423E992BB009BDDF5 /* Explore */,
 				42052C6323E992AF009BDDF5 /* Gallery */,
 				42052C6223E992A4009BDDF5 /* Decks */,
+				E784252123EAFD6E0026A28C /* Deck Builder */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -110,6 +117,16 @@
 				E784251C23E861B50026A28C /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E784252123EAFD6E0026A28C /* Deck Builder */ = {
+			isa = PBXGroup;
+			children = (
+				E784252223EAFD800026A28C /* CardDetails.storyboard */,
+				E784252423EB39440026A28C /* CardDetailsViewController.swift */,
+				E784252623EB4E550026A28C /* CardDetailTableViewCell.swift */,
+			);
+			path = "Deck Builder";
 			sourceTree = "<group>";
 		};
 		E7AE296123E0979100EBD3A9 = {
@@ -253,6 +270,7 @@
 				E7AE297723E0979600EBD3A9 /* Assets.xcassets in Resources */,
 				E7AE298923E09E9000EBD3A9 /* globals-en_us.json in Resources */,
 				E7AE297523E0979100EBD3A9 /* Main.storyboard in Resources */,
+				E784252323EAFD800026A28C /* CardDetails.storyboard in Resources */,
 				42052C6A23E99493009BDDF5 /* DecksStoryboard.storyboard in Resources */,
 				E7AE298723E09E6600EBD3A9 /* set1-en_us.json in Resources */,
 				42052C6823E993D2009BDDF5 /* GalleryStoryboard.storyboard in Resources */,
@@ -268,12 +286,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7236AF123E0D132008A1178 /* LORService.swift in Sources */,
+				E784252523EB39440026A28C /* CardDetailsViewController.swift in Sources */,
 				E7AE297223E0979100EBD3A9 /* ViewController.swift in Sources */,
 				E7236AF323E0D146008A1178 /* LORDAO.swift in Sources */,
 				E7AE296E23E0979100EBD3A9 /* AppDelegate.swift in Sources */,
 				E7AE297023E0979100EBD3A9 /* SceneDelegate.swift in Sources */,
 				E784252023EAE41D0026A28C /* Filter.swift in Sources */,
 				E7AE298B23E09EED00EBD3A9 /* Card.swift in Sources */,
+				E784252723EB4E550026A28C /* CardDetailTableViewCell.swift in Sources */,
 				E7236AF523E0D193008A1178 /* ServerError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
