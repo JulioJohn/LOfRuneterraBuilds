@@ -30,6 +30,8 @@ class CardDetailsViewController: UIViewController {
     func setupTableView() {
         cardsInfoTableView.delegate = self
         cardsInfoTableView.dataSource = self
+        
+        cardsInfoTableView.separatorStyle = .none
     }
     
     func transformInDynamic(label: UILabel) {
@@ -42,7 +44,12 @@ class CardDetailsViewController: UIViewController {
 extension CardDetailsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if let card = card {
+            if card.keywords.count > 0 {
+                return card.keywords.count
+            }
+        }
+        return 0
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -50,11 +57,11 @@ extension CardDetailsViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cardsInfoEffects") as? CardDetailTableViewCell
+        let cell = cardsInfoTableView.dequeueReusableCell(withIdentifier: "cardsInfoEffects", for: indexPath) as? CardDetailTableViewCell
         
         if let cell = cell {
-            cell.habilityImage.image = UIImage(named: "bla")
-            cell.habilityText.text = "blabla"
+            cell.habilityImage.image = UIImage(named: "\(card?.keywordRefs[indexPath.row])")
+            cell.habilityText.text = card?.keywordRefs[indexPath.row] //aqui na verdade é o efeito da carta!
             return cell
         }
         
