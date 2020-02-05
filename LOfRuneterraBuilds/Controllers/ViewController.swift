@@ -54,7 +54,7 @@ extension ViewController: UISearchBarDelegate {
         if searchText.isEmpty == false {
             filteredCards = allGameCards
             
-            myServices.filterForName(name: searchText, allCards: self.allGameCards!)
+            filteredCards = Filter(name: searchText, regions: nil, cost: 3).filterForName(allCards: allGameCards!)
         }
     }
     

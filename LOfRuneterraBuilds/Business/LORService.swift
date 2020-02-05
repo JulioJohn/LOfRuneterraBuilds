@@ -17,19 +17,4 @@ class LORService {
             completion(cards, error)
         }
     }
-    
-    func filterForName(name: String, allCards: [Card]) -> [Card]? {
-        var filteredCards = allCards.filter({ (card) -> Bool in
-            if card.name.contains(name) {
-                //cardImageView.image = UIImage(named: card.cardCode)
-                return true
-            } else {
-                return false
-            }
-        })
-        
-        print("Array filtrado com sucesso!")
-        
-        return filteredCards
-    }
 }
