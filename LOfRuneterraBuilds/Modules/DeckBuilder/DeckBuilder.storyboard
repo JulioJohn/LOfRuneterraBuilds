@@ -33,7 +33,7 @@
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="deckBuilderCell" id="znG-LO-Dxf" customClass="DeckCollectionViewCell" customModule="LOfRuneterraBuilds" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="180" height="271"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="DeckCollectionViewCell" insetsLayoutMarginsFromSafeArea="NO" id="Itq-g0-uhc" customClass="DeckCollectionViewCell" customModule="LOfRuneterraBuilds" customModuleProvider="target">
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Itq-g0-uhc">
                                                     <rect key="frame" x="0.0" y="0.0" width="180" height="271"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
@@ -120,7 +120,7 @@
                     <connections>
                         <outlet property="cardsAmount" destination="UwC-Vn-TCt" id="p7B-kx-WLF"/>
                         <outlet property="collectionView" destination="e1x-Th-3zN" id="YcS-dY-TcV"/>
-                        <segue destination="h3L-1t-Rkt" kind="presentation" id="xSU-U8-NjW"/>
+                        <segue destination="h3L-1t-Rkt" kind="presentation" identifier="goToCardDetails" id="xSU-U8-NjW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pPq-dh-MaI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
