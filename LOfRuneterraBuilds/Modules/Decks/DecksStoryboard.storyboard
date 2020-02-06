@@ -7,18 +7,33 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Decks-->
+        <!--My Decks-->
         <scene sceneID="xYU-8q-TIn">
             <objects>
-                <viewController title="Decks" id="OpU-xY-rsb" sceneMemberID="viewController">
+                <viewController title="My Decks" id="OpU-xY-rsb" customClass="DeckViewController" customModule="LOfRuneterraBuilds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="84L-q5-6Sk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XYd-br-0u3">
+                                <rect key="frame" x="0.0" y="76" width="414" height="737"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9Tf-7E-LAR" firstAttribute="bottom" secondItem="XYd-br-0u3" secondAttribute="bottom" id="5ll-qj-lAC"/>
+                            <constraint firstItem="9Tf-7E-LAR" firstAttribute="trailing" secondItem="XYd-br-0u3" secondAttribute="trailing" id="Zcf-A0-SWT"/>
+                            <constraint firstItem="XYd-br-0u3" firstAttribute="top" secondItem="9Tf-7E-LAR" secondAttribute="top" constant="32" id="d0h-Ti-wzj"/>
+                            <constraint firstItem="XYd-br-0u3" firstAttribute="leading" secondItem="9Tf-7E-LAR" secondAttribute="leading" id="fHO-bv-LE6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9Tf-7E-LAR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Decks" id="bnl-hb-j1M"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="XYd-br-0u3" id="i2F-7C-HWb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQS-ZG-QRH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
