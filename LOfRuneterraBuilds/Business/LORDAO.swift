@@ -21,4 +21,17 @@ class LORDAO {
             }
         }
     }
+    
+    func infosLoadJson(filename fileName: String, completion: @escaping (CardInfo?, Error?) -> Void) {
+        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                let jsonData = try decoder.decode(CardInfo.self, from: data)
+                completion(jsonData, nil)
+            } catch {
+                completion(nil, ServerError.jsonCantBeLoaded)
+            }
+        }
+    }
 }

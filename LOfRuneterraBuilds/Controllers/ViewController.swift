@@ -46,6 +46,14 @@ class ViewController: UIViewController {
             print("Não tem cartas")
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToCardDetails" {
+            if let vc = segue.destination as? CardDetailsViewController {
+                vc.card = allGameCards![0]
+            }
+        }
+    }
 }
 
 extension ViewController: UISearchBarDelegate {

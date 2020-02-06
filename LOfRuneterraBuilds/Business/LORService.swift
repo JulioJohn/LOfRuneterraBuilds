@@ -17,4 +17,12 @@ class LORService {
             completion(cards, error)
         }
     }
+    
+    func infosLoadJson(filename fileName: String, completion: @escaping (CardInfo?, Error?) -> Void) {
+        self.DAO.infosLoadJson(filename: fileName) { (cards, error) in
+            completion(cards, error)
+        }
+    }
+    
+    
 }
