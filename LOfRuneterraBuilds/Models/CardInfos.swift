@@ -13,6 +13,15 @@ struct CardInfo: Decodable {
     var regions: [Regions]
     var spellSpeeds: [SpellSpeeds]
     var rarities: [Rarities]
+    
+    func searchForHabilityDescription(hability: String) -> String {
+        for keyword in keywords {
+            if keyword.name.contains(hability) {
+                return keyword.description
+            }
+        }
+        return ""
+    }
 }
 
 struct Keywords: Decodable {
