@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4xa-ce-Gxb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4xa-ce-Gxb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,7 +22,7 @@
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="e1x-Th-3zN">
                                         <rect key="frame" x="0.0" y="83" width="414" height="605"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PhX-sJ-PBI">
                                             <size key="itemSize" width="184" height="259"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -31,20 +31,30 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="deckBuilderCell" id="znG-LO-Dxf" customClass="DeckCollectionViewCell" customModule="LOfRuneterraBuilds" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="184" height="259"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="180" height="271"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="DeckCollectionViewCell" insetsLayoutMarginsFromSafeArea="NO" id="Itq-g0-uhc" customClass="DeckCollectionViewCell" customModule="LOfRuneterraBuilds" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="184" height="259"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="271"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iRi-qA-WWu" customClass="CardSelectController" customModule="LOfRuneterraBuilds" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="172" height="251"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iRi-qA-WWu" customClass="CardSelectController" customModule="LOfRuneterraBuilds" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="180" height="271"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="180" id="8pH-AF-S2s"/>
+                                                                <constraint firstAttribute="width" secondItem="iRi-qA-WWu" secondAttribute="height" multiplier="180:271" id="icm-ar-tJb"/>
+                                                            </constraints>
                                                         </view>
                                                     </subviews>
+                                                    <color key="backgroundColor" red="0.17835763099999999" green="0.1837900579" blue="0.35688006880000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstItem="iRi-qA-WWu" firstAttribute="leading" secondItem="Itq-g0-uhc" secondAttribute="leading" id="6Rz-al-jf0"/>
+                                                        <constraint firstAttribute="trailing" secondItem="iRi-qA-WWu" secondAttribute="trailing" id="87g-UI-PES"/>
+                                                        <constraint firstItem="iRi-qA-WWu" firstAttribute="top" secondItem="Itq-g0-uhc" secondAttribute="top" id="OBA-cZ-ggD"/>
+                                                        <constraint firstAttribute="bottom" secondItem="iRi-qA-WWu" secondAttribute="bottom" id="vTo-Rx-ygh"/>
+                                                    </constraints>
                                                 </collectionViewCellContentView>
-                                                <size key="customSize" width="184" height="259"/>
+                                                <size key="customSize" width="180" height="271"/>
                                                 <connections>
                                                     <outlet property="cardSelect" destination="iRi-qA-WWu" id="fud-1V-2rL"/>
                                                 </connections>
@@ -110,11 +120,22 @@
                     <connections>
                         <outlet property="cardsAmount" destination="UwC-Vn-TCt" id="p7B-kx-WLF"/>
                         <outlet property="collectionView" destination="e1x-Th-3zN" id="YcS-dY-TcV"/>
+                        <segue destination="h3L-1t-Rkt" kind="presentation" id="xSU-U8-NjW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pPq-dh-MaI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="611.59420289855075" y="-416.51785714285711"/>
+        </scene>
+        <!--CardDetails-->
+        <scene sceneID="Uhd-W1-kUK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CardDetails" id="h3L-1t-Rkt" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="maL-79-5Ic"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8hx-5c-MqA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1329" y="-466"/>
         </scene>
     </scenes>
 </document>

@@ -16,7 +16,9 @@ class DeckBuilderController: UIViewController {
     
     
     var myServices: LORService = LORService()
-    var gameCards: [Card]? = []
+    var gameCards: [Card]? = nil
+    
+    var selectedCard: Card? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +50,17 @@ class DeckBuilderController: UIViewController {
     @IBAction func cartButton(_ sender: UIButton) {
         
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToCardDetails" {
+            if let vc = segue.destination as? CardDetailsViewController {
+                if let selectedCard = self.selectedCard {
+                    vc.card = selectedCard
+                }
+            }
+        }
+    }
+    
 }
 
 
@@ -57,19 +69,41 @@ class DeckBuilderController: UIViewController {
 extension DeckBuilderController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-      return 1
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let gameCards = self.gameCards {
-            return (gameCards.count - 1)
+        if let amount = self.gameCards {
+            return (amount.count / 2) - 1
         }
         return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "deckBuilderCell", for: indexPath) as! DeckCollectionViewCell
-      return cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "deckBuilderCell", for: indexPath) as! DeckCollectionViewCell
+        if let gameCards = self.gameCards {
+            cell.cardSelect.card = gameCards[indexPath.row]
+            cell.cardSelect.cardSetUp()
+        }
+        
+        cell.cardSelect.delegate = self
+        
+        return cell
+    }
+}
+
+
+extension DeckBuilderController: CardSelectDelegate {
+    func goToCardDetails(for card: Card) {
+        self.selectedCard = card
+        performSegue(withIdentifier: "goToCardDetails", sender: nil)
+    }
+
+    func addCard(for card: Card) {
+        print("Adicionou!!!")
     }
     
+    func removeCard(for card: Card) {
+        print("Removeu!!!")
+    }
 }
