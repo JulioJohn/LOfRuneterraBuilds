@@ -49,18 +49,12 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UISearchBarDelegate {
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty == false {
             filteredCards = allGameCards
             
-            allGameCards?.filter({ (card) -> Bool in
-                if card.name.contains(searchText) {
-                    cardImageView.image = UIImage(named: card.cardCode)
-                    return true
-                } else {
-                    return false
-                }
-            })
+            filteredCards = Filter(name: searchText, regions: nil, cost: 3).filterForName(allCards: allGameCards!)
         }
     }
     

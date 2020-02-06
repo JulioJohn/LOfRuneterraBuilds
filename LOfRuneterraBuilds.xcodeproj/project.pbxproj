@@ -20,6 +20,7 @@
 		E7236AF323E0D146008A1178 /* LORDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7236AF223E0D146008A1178 /* LORDAO.swift */; };
 		E7236AF523E0D193008A1178 /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7236AF423E0D193008A1178 /* ServerError.swift */; };
 		E784251D23E861B50026A28C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E784251C23E861B50026A28C /* CloudKit.framework */; };
+		E784252023EAE41D0026A28C /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784251F23EAE41D0026A28C /* Filter.swift */; };
 		E7AE296E23E0979100EBD3A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE296D23E0979100EBD3A9 /* AppDelegate.swift */; };
 		E7AE297023E0979100EBD3A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE296F23E0979100EBD3A9 /* SceneDelegate.swift */; };
 		E7AE297223E0979100EBD3A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE297123E0979100EBD3A9 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 		E7236AF423E0D193008A1178 /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
 		E784251A23E861B00026A28C /* LOfRuneterraBuilds.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LOfRuneterraBuilds.entitlements; sourceTree = "<group>"; };
 		E784251C23E861B50026A28C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		E784251F23EAE41D0026A28C /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		E7AE296A23E0979100EBD3A9 /* LOfRuneterraBuilds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOfRuneterraBuilds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7AE296D23E0979100EBD3A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7AE296F23E0979100EBD3A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				42052C7123EAE853009BDDF5 /* Deck.swift */,
 				42052C7323EAE8FD009BDDF5 /* Faction.swift */,
 				42052C7523EAEF33009BDDF5 /* PlayStyle.swift */,
+				E784251F23EAE41D0026A28C /* Filter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				E7236AF323E0D146008A1178 /* LORDAO.swift in Sources */,
 				E7AE296E23E0979100EBD3A9 /* AppDelegate.swift in Sources */,
 				E7AE297023E0979100EBD3A9 /* SceneDelegate.swift in Sources */,
+				E784252023EAE41D0026A28C /* Filter.swift in Sources */,
 				E7AE298B23E09EED00EBD3A9 /* Card.swift in Sources */,
 				E7236AF523E0D193008A1178 /* ServerError.swift in Sources */,
 			);
