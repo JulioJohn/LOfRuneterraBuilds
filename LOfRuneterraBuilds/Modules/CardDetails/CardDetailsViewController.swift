@@ -125,7 +125,12 @@ extension CardDetailsViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        if let cardInfos = cardInfos {
+            if cardInfos.keywords.count > 0 {
+                return 1
+            }
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -146,7 +151,6 @@ extension CardDetailsViewController: UITableViewDelegate, UITableViewDataSource 
             return cell
         }
 
-        
         return UITableViewCell()
     }
 }
