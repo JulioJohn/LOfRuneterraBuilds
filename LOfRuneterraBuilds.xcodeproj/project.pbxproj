@@ -97,7 +97,8 @@
 				42052C6423E992BB009BDDF5 /* Explore */,
 				42052C6323E992AF009BDDF5 /* Gallery */,
 				42052C6223E992A4009BDDF5 /* Decks */,
-				E784252123EAFD6E0026A28C /* Deck Builder */,
+				E784252123EAFD6E0026A28C /* DeckBuilder */,
+				E784252A23EC7E140026A28C /* CardDetails */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -108,11 +109,6 @@
 				42052C6B23EAE713009BDDF5 /* View */,
 				42052C6923E99493009BDDF5 /* DecksStoryboard.storyboard */,
 				42052C7723EAFFDA009BDDF5 /* DecksViewController.swift */,
-				3E5DE5EB23EAF93900452C91 /* DeckBuilder.storyboard */,
-				3E5DE5ED23EAFA9100452C91 /* CardSelect.xib */,
-				3E5DE5EF23EB0C2E00452C91 /* CardSelectController.swift */,
-				3E5DE5F123EC442E00452C91 /* DeckBuilderController.swift */,
-				3E5DE5F323EC457200452C91 /* DeckCollectionViewCell.swift */,
 			);
 			path = Decks;
 			sourceTree = "<group>";
@@ -167,14 +163,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E784252123EAFD6E0026A28C /* Deck Builder */ = {
+		E784252123EAFD6E0026A28C /* DeckBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				3E5DE5ED23EAFA9100452C91 /* CardSelect.xib */,
+				3E5DE5EF23EB0C2E00452C91 /* CardSelectController.swift */,
+				3E5DE5F323EC457200452C91 /* DeckCollectionViewCell.swift */,
+				3E5DE5EB23EAF93900452C91 /* DeckBuilder.storyboard */,
+				3E5DE5F123EC442E00452C91 /* DeckBuilderController.swift */,
+			);
+			path = DeckBuilder;
+			sourceTree = "<group>";
+		};
+		E784252A23EC7E140026A28C /* CardDetails */ = {
 			isa = PBXGroup;
 			children = (
 				E784252223EAFD800026A28C /* CardDetails.storyboard */,
 				E784252423EB39440026A28C /* CardDetailsViewController.swift */,
 				E784252623EB4E550026A28C /* CardDetailTableViewCell.swift */,
 			);
-			path = "Deck Builder";
+			path = CardDetails;
 			sourceTree = "<group>";
 		};
 		E7AE296123E0979100EBD3A9 = {

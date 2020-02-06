@@ -26,7 +26,6 @@ class DeckViewController: UIViewController {
 
         let d6 = Deck(name: "Teste 2", factions: [.demacia, .freljord], playStyle: .aggro)
 
-        
         return [d1, d2, d3, d4, d5, d6]
     }()
     
@@ -70,7 +69,7 @@ class DeckViewController: UIViewController {
     }
     
     @objc func buttonAction(_ sender: UIButton!) {
-        print("Button tapped")
+        performSegue(withIdentifier: "goToDeckBuilder", sender: nil)
     }
 }
 

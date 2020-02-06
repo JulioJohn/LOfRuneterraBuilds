@@ -10,6 +10,7 @@ import UIKit
 
 class CardSelectController: UIView {
     
+    @IBOutlet var contentView: UIView!
     
     @IBOutlet weak var cardImage: UIImageView!
     @IBOutlet weak var increaseButton: UIButton!
@@ -28,6 +29,11 @@ class CardSelectController: UIView {
     }
     
     func commonInit(){
+        Bundle.main.loadNibNamed("CardSelect", owner: self, options: nil)
+        addSubview(contentView)
+        contentView.frame = self.bounds
+        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        
         makeCirle(button: increaseButton)
         makeCirle(button: decreaseButton)
     }

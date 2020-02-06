@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardSelectController" customModule="LOfRuneterraBuilds" customModuleProvider="target">
+            <connections>
+                <outlet property="cardImage" destination="Aoi-9k-hzv" id="6vk-pL-efP"/>
+                <outlet property="cardsAmount" destination="h7A-gE-Rqv" id="i84-CY-GXq"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="9Yx-5u-dS3"/>
+                <outlet property="decreaseButton" destination="ofx-lK-3Mb" id="gY3-AY-QzQ"/>
+                <outlet property="increaseButton" destination="DsK-e5-Fwx" id="VzX-hS-bdv"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CardSelectController" customModule="LOfRuneterraBuilds" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="160" height="242"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -51,12 +59,6 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <connections>
-                <outlet property="cardImage" destination="Aoi-9k-hzv" id="nTo-8a-eN1"/>
-                <outlet property="cardsAmount" destination="h7A-gE-Rqv" id="vll-hw-T0B"/>
-                <outlet property="decreaseButton" destination="ofx-lK-3Mb" id="8Zs-vd-Yop"/>
-                <outlet property="increaseButton" destination="DsK-e5-Fwx" id="iKV-0S-RC1"/>
-            </connections>
             <point key="canvasLocation" x="73.599999999999994" y="30.584707646176913"/>
         </view>
     </objects>
