@@ -17,14 +17,36 @@ class CardDetailsViewController: UIViewController {
     @IBOutlet weak var cardsInfoTableView: UITableView!
     
     var card: Card? = nil
+    var cardInfos: CardInfo? = nil
+    
+    var lorService: LORService = LORService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTableView()
         
+        consumeJsonCardInfos()
+        
         transformInDynamic(label: regionText)
         transformInDynamic(label: monsterTypeLabel)
+    }
+    
+    func consumeJsonCardInfos() {
+        self.lorService.infosLoadJson(filename: "globals-en_us") { (cardInfos, error) in
+            if error != nil {
+                print(error)
+                return
+            }
+            
+            self.cardInfos = cardInfos
+            
+            DispatchQueue.main.async {
+                self.cardsInfoTableView.reloadData()
+            }
+            
+            
+        }
     }
     
     func setupTableView() {

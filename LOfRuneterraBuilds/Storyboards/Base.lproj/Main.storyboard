@@ -38,7 +38,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Tela de teste"/>
                                 <connections>
-                                    <segue destination="lC0-qx-vqj" kind="presentation" id="Qva-DY-dsK"/>
+                                    <segue destination="lC0-qx-vqj" kind="presentation" identifier="goToCardDetails" id="Tvh-OX-0rz"/>
                                 </connections>
                             </button>
                         </subviews>
