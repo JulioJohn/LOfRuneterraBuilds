@@ -48,6 +48,14 @@ class CardSelectController: UIView {
         makeCirle(button: decreaseButton)
     }
     
+    
+    /// Change actual cards and update the imageView
+    /// - Parameter card: Card
+    func changeCard(card: Card) {
+        self.card = card
+        self.cardSetUp()
+    }
+    
     func cardSetUp(){
         if let cardImageName = self.card?.cardCode {
             self.cardImage.image = UIImage(named: cardImageName)

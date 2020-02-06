@@ -11,6 +11,7 @@ import UIKit
 class CardDetailsViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var cardSelectImage: CardSelectController!
     
     @IBOutlet weak var regionLabel: UILabel!
     @IBOutlet weak var regionImage: UIImageView!
@@ -96,6 +97,8 @@ class CardDetailsViewController: UIViewController {
             makeImageRound(image: self.monsterImage)
             self.rarityImage.image = UIImage(named: rarityText)
             makeImageRound(image: self.rarityImage)
+            
+            cardSelectImage.changeCard(card: card)
         }
     }
     

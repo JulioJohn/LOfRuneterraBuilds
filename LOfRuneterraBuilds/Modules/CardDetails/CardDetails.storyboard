@@ -36,7 +36,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Gqr-xS-Q1R" userLabel="topContentStack">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="255"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VP7-ZW-wOE">
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VP7-ZW-wOE" customClass="CardSelectController" customModule="LOfRuneterraBuilds" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="167" height="255"/>
                                                                         <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
@@ -262,6 +262,7 @@
                     <connections>
                         <outlet property="attackLabel" destination="Fgq-vX-JgF" id="4cX-pj-MgA"/>
                         <outlet property="cardEffectLabel" destination="bf7-lm-gab" id="Mzt-IL-9nf"/>
+                        <outlet property="cardSelectImage" destination="VP7-ZW-wOE" id="HT5-JD-juA"/>
                         <outlet property="cardSpeakLabel" destination="Xx4-Du-3X8" id="v5X-dc-47f"/>
                         <outlet property="cardsInfoTableView" destination="0G5-BE-gfh" id="4P9-bf-9Ep"/>
                         <outlet property="defenseLabel" destination="dfB-a2-Dub" id="0xC-Ps-S3s"/>
