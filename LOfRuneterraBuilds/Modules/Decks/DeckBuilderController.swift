@@ -12,6 +12,8 @@ import UIKit
 class DeckBuilderController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var cardsAmount: UILabel!
+    
     
     var myServices: LORService = LORService()
     var gameCards: [Card]? = []
@@ -41,6 +43,10 @@ class DeckBuilderController: UIViewController {
                 self.collectionView.reloadData()
             }
         }
+    }
+    
+    @IBAction func cartButton(_ sender: UIButton) {
+        
     }
 
 }
