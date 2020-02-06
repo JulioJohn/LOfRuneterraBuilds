@@ -1,37 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OpU-xY-rsb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qZo-ZI-idq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Decks-->
+        <!--My Decks-->
         <scene sceneID="xYU-8q-TIn">
             <objects>
-                <viewController title="Decks" wantsFullScreenLayout="YES" modalPresentationStyle="currentContext" id="OpU-xY-rsb" sceneMemberID="viewController">
+                <viewController title="My Decks" id="OpU-xY-rsb" customClass="DeckViewController" customModule="LOfRuneterraBuilds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="84L-q5-6Sk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zXK-gz-2an">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="4Tg-Lm-Z9e"/>
-                                </items>
-                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XYd-br-0u3">
+                                <rect key="frame" x="0.0" y="120" width="414" height="693"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9Tf-7E-LAR" firstAttribute="bottom" secondItem="XYd-br-0u3" secondAttribute="bottom" id="5ll-qj-lAC"/>
+                            <constraint firstItem="9Tf-7E-LAR" firstAttribute="trailing" secondItem="XYd-br-0u3" secondAttribute="trailing" id="Zcf-A0-SWT"/>
+                            <constraint firstItem="XYd-br-0u3" firstAttribute="top" secondItem="9Tf-7E-LAR" secondAttribute="top" constant="32" id="d0h-Ti-wzj"/>
+                            <constraint firstItem="XYd-br-0u3" firstAttribute="leading" secondItem="9Tf-7E-LAR" secondAttribute="leading" id="fHO-bv-LE6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9Tf-7E-LAR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Decks" id="bnl-hb-j1M"/>
+                    <navigationItem key="navigationItem" id="FVm-RH-bYp"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="XYd-br-0u3" id="i2F-7C-HWb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQS-ZG-QRH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="113" y="49"/>
+            <point key="canvasLocation" x="878" y="21"/>
+        </scene>
+        <!--My Decks-->
+        <scene sceneID="n1R-lw-UwN">
+            <objects>
+                <navigationController id="qZo-ZI-idq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Decks" id="ETO-GZ-DcC"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T6z-cV-E4q">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OpU-xY-rsb" kind="relationship" relationship="rootViewController" id="sn2-fV-RcN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X4U-wZ-lt3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-49" y="22"/>
         </scene>
     </scenes>
 </document>

@@ -15,6 +15,12 @@
 		42052C6623E9939C009BDDF5 /* ExploreStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42052C6523E9939C009BDDF5 /* ExploreStoryboard.storyboard */; };
 		42052C6823E993D2009BDDF5 /* GalleryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42052C6723E993D2009BDDF5 /* GalleryStoryboard.storyboard */; };
 		42052C6A23E99493009BDDF5 /* DecksStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42052C6923E99493009BDDF5 /* DecksStoryboard.storyboard */; };
+		42052C6E23EAE831009BDDF5 /* DeckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42052C6D23EAE831009BDDF5 /* DeckCell.swift */; };
+		42052C7023EAE83D009BDDF5 /* DeckCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42052C6F23EAE83D009BDDF5 /* DeckCell.xib */; };
+		42052C7223EAE853009BDDF5 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42052C7123EAE853009BDDF5 /* Deck.swift */; };
+		42052C7423EAE8FD009BDDF5 /* Faction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42052C7323EAE8FD009BDDF5 /* Faction.swift */; };
+		42052C7623EAEF33009BDDF5 /* PlayStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42052C7523EAEF33009BDDF5 /* PlayStyle.swift */; };
+		42052C7823EAFFDA009BDDF5 /* DecksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42052C7723EAFFDA009BDDF5 /* DecksViewController.swift */; };
 		E7236AF123E0D132008A1178 /* LORService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7236AF023E0D132008A1178 /* LORService.swift */; };
 		E7236AF323E0D146008A1178 /* LORDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7236AF223E0D146008A1178 /* LORDAO.swift */; };
 		E7236AF523E0D193008A1178 /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7236AF423E0D193008A1178 /* ServerError.swift */; };
@@ -44,6 +50,12 @@
 		42052C6523E9939C009BDDF5 /* ExploreStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExploreStoryboard.storyboard; sourceTree = "<group>"; };
 		42052C6723E993D2009BDDF5 /* GalleryStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GalleryStoryboard.storyboard; sourceTree = "<group>"; };
 		42052C6923E99493009BDDF5 /* DecksStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DecksStoryboard.storyboard; sourceTree = "<group>"; };
+		42052C6D23EAE831009BDDF5 /* DeckCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCell.swift; sourceTree = "<group>"; };
+		42052C6F23EAE83D009BDDF5 /* DeckCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeckCell.xib; sourceTree = "<group>"; };
+		42052C7123EAE853009BDDF5 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		42052C7323EAE8FD009BDDF5 /* Faction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faction.swift; sourceTree = "<group>"; };
+		42052C7523EAEF33009BDDF5 /* PlayStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayStyle.swift; sourceTree = "<group>"; };
+		42052C7723EAFFDA009BDDF5 /* DecksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecksViewController.swift; sourceTree = "<group>"; };
 		E7236AF023E0D132008A1178 /* LORService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LORService.swift; sourceTree = "<group>"; };
 		E7236AF223E0D146008A1178 /* LORDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LORDAO.swift; sourceTree = "<group>"; };
 		E7236AF423E0D193008A1178 /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
@@ -93,7 +105,9 @@
 		42052C6223E992A4009BDDF5 /* Decks */ = {
 			isa = PBXGroup;
 			children = (
+				42052C6B23EAE713009BDDF5 /* View */,
 				42052C6923E99493009BDDF5 /* DecksStoryboard.storyboard */,
+				42052C7723EAFFDA009BDDF5 /* DecksViewController.swift */,
 				3E5DE5EB23EAF93900452C91 /* DeckBuilder.storyboard */,
 				3E5DE5ED23EAFA9100452C91 /* CardSelect.xib */,
 				3E5DE5EF23EB0C2E00452C91 /* CardSelectController.swift */,
@@ -117,6 +131,23 @@
 				42052C6523E9939C009BDDF5 /* ExploreStoryboard.storyboard */,
 			);
 			path = Explore;
+			sourceTree = "<group>";
+		};
+		42052C6B23EAE713009BDDF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				42052C6C23EAE75A009BDDF5 /* DeckCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		42052C6C23EAE75A009BDDF5 /* DeckCell */ = {
+			isa = PBXGroup;
+			children = (
+				42052C6D23EAE831009BDDF5 /* DeckCell.swift */,
+				42052C6F23EAE83D009BDDF5 /* DeckCell.xib */,
+			);
+			path = DeckCell;
 			sourceTree = "<group>";
 		};
 		E7236AEF23E0D117008A1178 /* Business */ = {
@@ -191,6 +222,9 @@
 			isa = PBXGroup;
 			children = (
 				E7AE298A23E09EED00EBD3A9 /* Card.swift */,
+				42052C7123EAE853009BDDF5 /* Deck.swift */,
+				42052C7323EAE8FD009BDDF5 /* Faction.swift */,
+				42052C7523EAEF33009BDDF5 /* PlayStyle.swift */,
 				E784251F23EAE41D0026A28C /* Filter.swift */,
 				E784252823EC40B70026A28C /* CardInfos.swift */,
 			);
@@ -293,6 +327,7 @@
 				42052C6A23E99493009BDDF5 /* DecksStoryboard.storyboard in Resources */,
 				3E5DE5EC23EAF93900452C91 /* DeckBuilder.storyboard in Resources */,
 				E7AE298723E09E6600EBD3A9 /* set1-en_us.json in Resources */,
+				42052C7023EAE83D009BDDF5 /* DeckCell.xib in Resources */,
 				42052C6823E993D2009BDDF5 /* GalleryStoryboard.storyboard in Resources */,
 				42052C6623E9939C009BDDF5 /* ExploreStoryboard.storyboard in Resources */,
 			);
@@ -305,7 +340,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42052C7423EAE8FD009BDDF5 /* Faction.swift in Sources */,
+				42052C7223EAE853009BDDF5 /* Deck.swift in Sources */,
+				42052C7623EAEF33009BDDF5 /* PlayStyle.swift in Sources */,
+				42052C6E23EAE831009BDDF5 /* DeckCell.swift in Sources */,
 				E7236AF123E0D132008A1178 /* LORService.swift in Sources */,
+				42052C7823EAFFDA009BDDF5 /* DecksViewController.swift in Sources */,
 				E784252523EB39440026A28C /* CardDetailsViewController.swift in Sources */,
 				3E5DE5F423EC457200452C91 /* DeckCollectionViewCell.swift in Sources */,
 				E7AE297223E0979100EBD3A9 /* ViewController.swift in Sources */,
