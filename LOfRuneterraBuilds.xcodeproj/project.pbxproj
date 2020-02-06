@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E5DE5EC23EAF93900452C91 /* DeckBuilder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E5DE5EB23EAF93900452C91 /* DeckBuilder.storyboard */; };
+		3E5DE5EE23EAFA9100452C91 /* CardSelect.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E5DE5ED23EAFA9100452C91 /* CardSelect.xib */; };
+		3E5DE5F023EB0C2E00452C91 /* CardSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DE5EF23EB0C2E00452C91 /* CardSelectController.swift */; };
+		3E5DE5F223EC442E00452C91 /* DeckBuilderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DE5F123EC442E00452C91 /* DeckBuilderController.swift */; };
+		3E5DE5F423EC457200452C91 /* DeckCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DE5F323EC457200452C91 /* DeckCollectionViewCell.swift */; };
 		42052C6623E9939C009BDDF5 /* ExploreStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42052C6523E9939C009BDDF5 /* ExploreStoryboard.storyboard */; };
 		42052C6823E993D2009BDDF5 /* GalleryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42052C6723E993D2009BDDF5 /* GalleryStoryboard.storyboard */; };
 		42052C6A23E99493009BDDF5 /* DecksStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42052C6923E99493009BDDF5 /* DecksStoryboard.storyboard */; };
@@ -26,6 +31,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E5DE5EB23EAF93900452C91 /* DeckBuilder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeckBuilder.storyboard; sourceTree = "<group>"; };
+		3E5DE5ED23EAFA9100452C91 /* CardSelect.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardSelect.xib; sourceTree = "<group>"; };
+		3E5DE5EF23EB0C2E00452C91 /* CardSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSelectController.swift; sourceTree = "<group>"; };
+		3E5DE5F123EC442E00452C91 /* DeckBuilderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckBuilderController.swift; sourceTree = "<group>"; };
+		3E5DE5F323EC457200452C91 /* DeckCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCollectionViewCell.swift; sourceTree = "<group>"; };
 		42052C6523E9939C009BDDF5 /* ExploreStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExploreStoryboard.storyboard; sourceTree = "<group>"; };
 		42052C6723E993D2009BDDF5 /* GalleryStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GalleryStoryboard.storyboard; sourceTree = "<group>"; };
 		42052C6923E99493009BDDF5 /* DecksStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DecksStoryboard.storyboard; sourceTree = "<group>"; };
@@ -73,6 +83,11 @@
 			isa = PBXGroup;
 			children = (
 				42052C6923E99493009BDDF5 /* DecksStoryboard.storyboard */,
+				3E5DE5EB23EAF93900452C91 /* DeckBuilder.storyboard */,
+				3E5DE5ED23EAFA9100452C91 /* CardSelect.xib */,
+				3E5DE5EF23EB0C2E00452C91 /* CardSelectController.swift */,
+				3E5DE5F123EC442E00452C91 /* DeckBuilderController.swift */,
+				3E5DE5F323EC457200452C91 /* DeckCollectionViewCell.swift */,
 			);
 			path = Decks;
 			sourceTree = "<group>";
@@ -247,10 +262,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7AE297A23E0979600EBD3A9 /* LaunchScreen.storyboard in Resources */,
+				3E5DE5EE23EAFA9100452C91 /* CardSelect.xib in Resources */,
 				E7AE297723E0979600EBD3A9 /* Assets.xcassets in Resources */,
 				E7AE298923E09E9000EBD3A9 /* globals-en_us.json in Resources */,
 				E7AE297523E0979100EBD3A9 /* Main.storyboard in Resources */,
 				42052C6A23E99493009BDDF5 /* DecksStoryboard.storyboard in Resources */,
+				3E5DE5EC23EAF93900452C91 /* DeckBuilder.storyboard in Resources */,
 				E7AE298723E09E6600EBD3A9 /* set1-en_us.json in Resources */,
 				42052C6823E993D2009BDDF5 /* GalleryStoryboard.storyboard in Resources */,
 				42052C6623E9939C009BDDF5 /* ExploreStoryboard.storyboard in Resources */,
@@ -265,9 +282,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7236AF123E0D132008A1178 /* LORService.swift in Sources */,
+				3E5DE5F423EC457200452C91 /* DeckCollectionViewCell.swift in Sources */,
 				E7AE297223E0979100EBD3A9 /* ViewController.swift in Sources */,
 				E7236AF323E0D146008A1178 /* LORDAO.swift in Sources */,
+				3E5DE5F023EB0C2E00452C91 /* CardSelectController.swift in Sources */,
 				E7AE296E23E0979100EBD3A9 /* AppDelegate.swift in Sources */,
+				3E5DE5F223EC442E00452C91 /* DeckBuilderController.swift in Sources */,
 				E7AE297023E0979100EBD3A9 /* SceneDelegate.swift in Sources */,
 				E7AE298B23E09EED00EBD3A9 /* Card.swift in Sources */,
 				E7236AF523E0D193008A1178 /* ServerError.swift in Sources */,
