@@ -18,7 +18,16 @@ class DeckViewController: UIViewController {
         
         let d2 = Deck(name: "Teste 2", factions: [.demacia, .freljord], playStyle: .aggro)
         
-        return [d1, d2]
+        let d3 = Deck(name: "Teste 2", factions: [.demacia, .freljord], playStyle: .aggro)
+
+        let d4 = Deck(name: "Teste 2", factions: [.demacia, .freljord], playStyle: .aggro)
+
+        let d5 = Deck(name: "Teste 2", factions: [.demacia, .freljord], playStyle: .aggro)
+
+        let d6 = Deck(name: "Teste 2", factions: [.demacia, .freljord], playStyle: .aggro)
+
+        
+        return [d1, d2, d3, d4, d5, d6]
     }()
     
     
@@ -36,7 +45,7 @@ class DeckViewController: UIViewController {
         let nib = UINib.init(nibName: "DeckCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "deckCell")
         
-        createTableViewFooter()
+//        createTableViewFooter()
     }
     
     func createTableViewFooter() {
@@ -70,6 +79,32 @@ extension DeckViewController: UITableViewDelegate {
 }
 
 extension DeckViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let customView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 50))
+        
+        let button = UIButton()
+        button.setTitle("Create New Deck", for: .normal)
+        button.setTitleColor(UIColor.black, for: .normal)
+        button.backgroundColor = UIColor(red: 189/255, green: 148/255, blue: 91/255, alpha: 1)
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        customView.addSubview(button)
+        
+        //Adding constraints
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.topAnchor.constraint(equalTo: customView.topAnchor).isActive = true
+        button.bottomAnchor.constraint(equalTo: customView.bottomAnchor).isActive = true
+        button.leadingAnchor.constraint(equalTo: customView.leadingAnchor, constant: 20).isActive = true
+        button.trailingAnchor.constraint(equalTo: customView.trailingAnchor, constant: -20).isActive = true
+        button.layer.cornerRadius = 6
+        
+        return customView
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return decks.count
     }
