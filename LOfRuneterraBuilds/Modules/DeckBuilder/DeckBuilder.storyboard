@@ -120,7 +120,7 @@
                     <connections>
                         <outlet property="cardsAmount" destination="UwC-Vn-TCt" id="p7B-kx-WLF"/>
                         <outlet property="collectionView" destination="e1x-Th-3zN" id="YcS-dY-TcV"/>
-                        <segue destination="h3L-1t-Rkt" kind="presentation" identifier="goToCardDetails" id="xSU-U8-NjW"/>
+                        <segue destination="h3L-1t-Rkt" kind="show" identifier="goToCardDetails" id="xSU-U8-NjW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pPq-dh-MaI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

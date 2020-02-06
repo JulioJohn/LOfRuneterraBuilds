@@ -6,6 +6,8 @@
 //  Copyright © 2020 Júlio John Tavares Ramos. All rights reserved.
 //
 
+//para fazer markup do codigo usar "option + command + /"
+
 import Foundation
 import UIKit
 
