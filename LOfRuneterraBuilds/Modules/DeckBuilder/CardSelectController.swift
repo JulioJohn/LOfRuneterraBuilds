@@ -43,9 +43,6 @@ class CardSelectController: UIView {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        
-        makeCirle(button: increaseButton)
-        makeCirle(button: decreaseButton)
     }
     
     
