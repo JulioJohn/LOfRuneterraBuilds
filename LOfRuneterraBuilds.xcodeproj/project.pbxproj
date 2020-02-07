@@ -173,8 +173,6 @@
 		E784252123EAFD6E0026A28C /* DeckBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				3E5DE5ED23EAFA9100452C91 /* CardSelect.xib */,
-				3E5DE5EF23EB0C2E00452C91 /* CardSelectController.swift */,
 				3E5DE5F323EC457200452C91 /* DeckCollectionViewCell.swift */,
 				3E5DE5EB23EAF93900452C91 /* DeckBuilder.storyboard */,
 				3E5DE5F123EC442E00452C91 /* DeckBuilderController.swift */,
@@ -195,6 +193,8 @@
 		E784252D23EDA7C50026A28C /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				3E5DE5ED23EAFA9100452C91 /* CardSelect.xib */,
+				3E5DE5EF23EB0C2E00452C91 /* CardSelectController.swift */,
 				E784252E23EDA8050026A28C /* TitleCell.xib */,
 				E784253023EDA8990026A28C /* TitleCellUIView.swift */,
 			);
