@@ -10,7 +10,9 @@ import UIKit
 
 class CardDetailsViewController: UIViewController {
     
-    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var navegationTitle: UINavigationItem!
+    @IBOutlet weak var titleCell: TitleCellUIView!
     @IBOutlet weak var cardSelectImage: CardSelectController!
     
     @IBOutlet weak var regionLabel: UILabel!
@@ -40,6 +42,7 @@ class CardDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupNavBar()
         setupTableView()
         setupTableViewData()
         
@@ -65,6 +68,13 @@ class CardDetailsViewController: UIViewController {
         }
     }
     
+    func setupNavBar() {
+        if let card = card {
+            self.navegationTitle.title = card.name
+        }
+        self.navigationController?.navigationBar.barStyle = .black
+    }
+    
     func setupTableView() {
         cardsInfoTableView.delegate = self
         cardsInfoTableView.dataSource = self
@@ -83,7 +93,7 @@ class CardDetailsViewController: UIViewController {
             let attackText = Int(card.attack)
             let defenseText = Int(card.health)
             
-            self.nameLabel.text = nameText
+            self.titleCell.titleLabel.text = nameText
             self.regionLabel.text = regionText
             self.monsterTypeLabel.text = monsterTypeText
             self.rarityLabel.text = rarityText
@@ -144,9 +154,6 @@ extension CardDetailsViewController: UITableViewDelegate, UITableViewDataSource 
             let habilityText = card.keywordRefs[indexPath.row]
             //Se tiver descricao carregada
             let effectDescription = cardInfos.searchForHabilityDescription(hability: habilityText)
-        
-            cell.habilityImage.image = UIImage(named: habilityText)
-            makeImageRound(image: cell.habilityImage)
         
             cell.habilityText.text = habilityText + "- " + effectDescription
             
