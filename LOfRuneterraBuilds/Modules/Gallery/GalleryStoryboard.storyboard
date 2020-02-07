@@ -17,7 +17,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ek7-CG-Qza"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Gallery" id="6xi-dZ-p9I"/>
+                    <tabBarItem key="tabBarItem" title="Gallery" image="Gallery" selectedImage="Gallery" id="6xi-dZ-p9I">
+                        <color key="badgeColor" red="0.73943358660000003" green="0.57945376630000001" blue="0.35289275650000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w9H-zn-fe5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -25,4 +27,7 @@
             <point key="canvasLocation" x="113" y="49"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Gallery" width="19" height="16"/>
+    </resources>
 </document>
