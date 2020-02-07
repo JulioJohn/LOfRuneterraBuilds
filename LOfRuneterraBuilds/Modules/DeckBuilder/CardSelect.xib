@@ -6,6 +6,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Oswald-Regular.ttf">
+            <string>Oswald-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardSelectController" customModule="LOfRuneterraBuilds" customModuleProvider="target">
             <connections>
@@ -33,11 +38,11 @@
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX0-Oe-aNz">
-                            <rect key="frame" x="15" y="1" width="160" height="245"/>
+                            <rect key="frame" x="39" y="13.5" width="112" height="220"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="245" id="jki-Vl-BK3"/>
-                                <constraint firstAttribute="width" secondItem="eX0-Oe-aNz" secondAttribute="height" multiplier="32:49" id="nGx-ct-NkN"/>
-                                <constraint firstAttribute="width" constant="160" id="szy-4O-b5T"/>
+                                <constraint firstAttribute="width" secondItem="eX0-Oe-aNz" secondAttribute="height" multiplier="28:55" id="5HW-aa-rf3"/>
+                                <constraint firstAttribute="height" constant="220" id="6TM-Ao-Ofq"/>
+                                <constraint firstAttribute="width" constant="112" id="bJ3-Kf-XwR"/>
                             </constraints>
                             <connections>
                                 <action selector="goToCardDetail:" destination="-1" eventType="touchUpInside" id="fSn-tf-ilG"/>
@@ -49,6 +54,7 @@
                                 <constraint firstAttribute="width" constant="44" id="WOr-I1-PXM"/>
                                 <constraint firstAttribute="width" secondItem="DsK-e5-Fwx" secondAttribute="height" multiplier="1:1" id="hzr-9c-Asn"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
                             <state key="normal" title="+" backgroundImage="Ellipse 5">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
@@ -62,6 +68,7 @@
                                 <constraint firstAttribute="width" constant="44" id="1Wy-Kd-Fe2"/>
                                 <constraint firstAttribute="width" secondItem="ofx-lK-3Mb" secondAttribute="height" multiplier="1:1" id="LCz-BS-2Gs"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
                             <state key="normal" title="-" backgroundImage="Ellipse 5">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
@@ -75,22 +82,22 @@
                                 <constraint firstAttribute="width" constant="26" id="1eQ-vJ-zSr"/>
                                 <constraint firstAttribute="width" secondItem="h7A-gE-Rqv" secondAttribute="height" multiplier="13:11" id="MSc-8H-kFp"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="eX0-Oe-aNz" firstAttribute="top" secondItem="4pe-jH-MI6" secondAttribute="top" constant="1" id="6ee-G6-8iQ"/>
                         <constraint firstItem="ofx-lK-3Mb" firstAttribute="leading" secondItem="Aoi-9k-hzv" secondAttribute="leading" constant="-10" id="85k-u6-y1L"/>
                         <constraint firstAttribute="bottom" secondItem="h7A-gE-Rqv" secondAttribute="bottom" constant="2" id="CD8-yW-T1C"/>
                         <constraint firstItem="Aoi-9k-hzv" firstAttribute="centerX" secondItem="4pe-jH-MI6" secondAttribute="centerX" id="SNp-q4-JSA"/>
-                        <constraint firstItem="eX0-Oe-aNz" firstAttribute="centerX" secondItem="4pe-jH-MI6" secondAttribute="centerX" id="Sd0-vV-0QS"/>
                         <constraint firstItem="h7A-gE-Rqv" firstAttribute="bottom" secondItem="Aoi-9k-hzv" secondAttribute="bottom" constant="23" id="aiK-Dg-ofi"/>
                         <constraint firstItem="ofx-lK-3Mb" firstAttribute="top" secondItem="Aoi-9k-hzv" secondAttribute="top" constant="80" id="eKH-PO-7px"/>
                         <constraint firstItem="h7A-gE-Rqv" firstAttribute="centerX" secondItem="4pe-jH-MI6" secondAttribute="centerX" id="iVF-CE-aVI"/>
                         <constraint firstItem="Aoi-9k-hzv" firstAttribute="top" secondItem="4pe-jH-MI6" secondAttribute="top" constant="1" id="jAn-bZ-pZE"/>
+                        <constraint firstItem="eX0-Oe-aNz" firstAttribute="centerX" secondItem="4pe-jH-MI6" secondAttribute="centerX" id="llK-7K-qw7"/>
+                        <constraint firstItem="eX0-Oe-aNz" firstAttribute="centerY" secondItem="Aoi-9k-hzv" secondAttribute="centerY" id="njq-ea-jC4"/>
                         <constraint firstItem="DsK-e5-Fwx" firstAttribute="trailing" secondItem="Aoi-9k-hzv" secondAttribute="trailing" constant="10" id="pwh-fD-aqa"/>
                         <constraint firstItem="DsK-e5-Fwx" firstAttribute="top" secondItem="Aoi-9k-hzv" secondAttribute="top" constant="80" id="wdR-V4-E0r"/>
                     </constraints>
@@ -105,7 +112,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="73.599999999999994" y="30.584707646176913"/>
+            <point key="canvasLocation" x="73.599999999999994" y="30.134932533733135"/>
         </view>
     </objects>
     <resources>
