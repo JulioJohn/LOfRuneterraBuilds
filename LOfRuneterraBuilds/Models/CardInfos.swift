@@ -16,7 +16,7 @@ struct CardInfo: Decodable {
     
     func searchForHabilityDescription(hability: String) -> String {
         for keyword in keywords {
-            if keyword.name.contains(hability) {
+            if keyword.nameRef.contains(hability) {
                 return keyword.description
             }
         }

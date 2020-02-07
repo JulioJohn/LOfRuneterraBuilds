@@ -34,6 +34,27 @@ struct Card: Decodable {
     var subtype: String
     var type: String
     var collectible: Bool
+    
+    func descriptionWithoutXML() -> String{
+        var newDescription = ""
+        var betweenKey: Bool = false
+        
+        for character in description {
+            if character == "<" {
+                betweenKey = true
+            }
+            
+            if betweenKey == false {
+                newDescription.append(character)
+            }
+            
+            if character == ">" {
+                betweenKey = false
+            }
+        }
+        
+        return newDescription
+    }
 }
 
 struct AssetsDetails: Decodable {

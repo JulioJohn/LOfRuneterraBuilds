@@ -30,6 +30,9 @@
 		E784252523EB39440026A28C /* CardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784252423EB39440026A28C /* CardDetailsViewController.swift */; };
 		E784252723EB4E550026A28C /* CardDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784252623EB4E550026A28C /* CardDetailTableViewCell.swift */; };
 		E784252923EC40B70026A28C /* CardInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784252823EC40B70026A28C /* CardInfos.swift */; };
+		E784252F23EDA8050026A28C /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E784252E23EDA8050026A28C /* TitleCell.xib */; };
+		E784253123EDA8990026A28C /* TitleCellUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784253023EDA8990026A28C /* TitleCellUIView.swift */; };
+		E784253323EDAEAA0026A28C /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E784253223EDAEAA0026A28C /* Oswald-Regular.ttf */; };
 		E7AE296E23E0979100EBD3A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE296D23E0979100EBD3A9 /* AppDelegate.swift */; };
 		E7AE297023E0979100EBD3A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE296F23E0979100EBD3A9 /* SceneDelegate.swift */; };
 		E7AE297223E0979100EBD3A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE297123E0979100EBD3A9 /* ViewController.swift */; };
@@ -66,6 +69,9 @@
 		E784252423EB39440026A28C /* CardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewController.swift; sourceTree = "<group>"; };
 		E784252623EB4E550026A28C /* CardDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailTableViewCell.swift; sourceTree = "<group>"; };
 		E784252823EC40B70026A28C /* CardInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfos.swift; sourceTree = "<group>"; };
+		E784252E23EDA8050026A28C /* TitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
+		E784253023EDA8990026A28C /* TitleCellUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCellUIView.swift; sourceTree = "<group>"; };
+		E784253223EDAEAA0026A28C /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
 		E7AE296A23E0979100EBD3A9 /* LOfRuneterraBuilds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOfRuneterraBuilds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7AE296D23E0979100EBD3A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7AE296F23E0979100EBD3A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +100,7 @@
 		42052C6123E99288009BDDF5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E784252D23EDA7C50026A28C /* CustomViews */,
 				42052C6423E992BB009BDDF5 /* Explore */,
 				42052C6323E992AF009BDDF5 /* Gallery */,
 				42052C6223E992A4009BDDF5 /* Decks */,
@@ -185,6 +192,23 @@
 			path = CardDetails;
 			sourceTree = "<group>";
 		};
+		E784252D23EDA7C50026A28C /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				E784252E23EDA8050026A28C /* TitleCell.xib */,
+				E784253023EDA8990026A28C /* TitleCellUIView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		E784253423EDAEDE0026A28C /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E784253223EDAEAA0026A28C /* Oswald-Regular.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		E7AE296123E0979100EBD3A9 = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +266,7 @@
 		E7AE298323E09B1B00EBD3A9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E784253423EDAEDE0026A28C /* fonts */,
 				E7AE298823E09E9000EBD3A9 /* globals-en_us.json */,
 				E7AE298623E09E6600EBD3A9 /* set1-en_us.json */,
 				E7AE296F23E0979100EBD3A9 /* SceneDelegate.swift */,
@@ -329,12 +354,14 @@
 				E7AE297A23E0979600EBD3A9 /* LaunchScreen.storyboard in Resources */,
 				3E5DE5EE23EAFA9100452C91 /* CardSelect.xib in Resources */,
 				E7AE297723E0979600EBD3A9 /* Assets.xcassets in Resources */,
+				E784253323EDAEAA0026A28C /* Oswald-Regular.ttf in Resources */,
 				E7AE298923E09E9000EBD3A9 /* globals-en_us.json in Resources */,
 				E7AE297523E0979100EBD3A9 /* Main.storyboard in Resources */,
 				E784252323EAFD800026A28C /* CardDetails.storyboard in Resources */,
 				42052C6A23E99493009BDDF5 /* DecksStoryboard.storyboard in Resources */,
 				3E5DE5EC23EAF93900452C91 /* DeckBuilder.storyboard in Resources */,
 				E7AE298723E09E6600EBD3A9 /* set1-en_us.json in Resources */,
+				E784252F23EDA8050026A28C /* TitleCell.xib in Resources */,
 				42052C7023EAE83D009BDDF5 /* DeckCell.xib in Resources */,
 				42052C6823E993D2009BDDF5 /* GalleryStoryboard.storyboard in Resources */,
 				42052C6623E9939C009BDDF5 /* ExploreStoryboard.storyboard in Resources */,
@@ -359,6 +386,7 @@
 				E7AE297223E0979100EBD3A9 /* ViewController.swift in Sources */,
 				E7236AF323E0D146008A1178 /* LORDAO.swift in Sources */,
 				3E5DE5F023EB0C2E00452C91 /* CardSelectController.swift in Sources */,
+				E784253123EDA8990026A28C /* TitleCellUIView.swift in Sources */,
 				E7AE296E23E0979100EBD3A9 /* AppDelegate.swift in Sources */,
 				3E5DE5F223EC442E00452C91 /* DeckBuilderController.swift in Sources */,
 				E7AE297023E0979100EBD3A9 /* SceneDelegate.swift in Sources */,

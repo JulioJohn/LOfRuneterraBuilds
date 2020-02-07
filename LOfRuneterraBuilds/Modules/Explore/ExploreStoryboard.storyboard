@@ -17,7 +17,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="vIO-Tt-r1P"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Explore" id="p0g-6h-qpG"/>
+                    <tabBarItem key="tabBarItem" title="Explore" image="Explore" selectedImage="Explore" id="p0g-6h-qpG">
+                        <color key="badgeColor" red="0.73943358660000003" green="0.57945376630000001" blue="0.35289275650000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3A-3W-oBd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -25,4 +27,7 @@
             <point key="canvasLocation" x="113" y="49"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Explore" width="23" height="19"/>
+    </resources>
 </document>
