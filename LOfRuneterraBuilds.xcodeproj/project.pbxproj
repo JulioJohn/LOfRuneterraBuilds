@@ -22,6 +22,10 @@
 		42052C7623EAEF33009BDDF5 /* PlayStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42052C7523EAEF33009BDDF5 /* PlayStyle.swift */; };
 		42052C7823EAFFDA009BDDF5 /* DecksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42052C7723EAFFDA009BDDF5 /* DecksViewController.swift */; };
 		42B66EA523F1C09300985C5E /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B66EA423F1C09300985C5E /* ExploreViewController.swift */; };
+		42B66EA823F1CC2E00985C5E /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42B66EA623F1CC2900985C5E /* OpenSans-Bold.ttf */; };
+		42B66EA923F1CC3200985C5E /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42B66EA723F1CC2900985C5E /* OpenSans-Regular.ttf */; };
+		42B66EAB23F1CC5300985C5E /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42B66EAA23F1CC5300985C5E /* OpenSans-SemiBold.ttf */; };
+		42B66EAE23F1ED8B00985C5E /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B66EAD23F1ED8B00985C5E /* UIFont+Extensions.swift */; };
 		E7236AF123E0D132008A1178 /* LORService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7236AF023E0D132008A1178 /* LORService.swift */; };
 		E7236AF323E0D146008A1178 /* LORDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7236AF223E0D146008A1178 /* LORDAO.swift */; };
 		E7236AF523E0D193008A1178 /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7236AF423E0D193008A1178 /* ServerError.swift */; };
@@ -63,6 +67,10 @@
 		42052C7523EAEF33009BDDF5 /* PlayStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayStyle.swift; sourceTree = "<group>"; };
 		42052C7723EAFFDA009BDDF5 /* DecksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecksViewController.swift; sourceTree = "<group>"; };
 		42B66EA423F1C09300985C5E /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		42B66EA623F1CC2900985C5E /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		42B66EA723F1CC2900985C5E /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		42B66EAA23F1CC5300985C5E /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		42B66EAD23F1ED8B00985C5E /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		E7236AF023E0D132008A1178 /* LORService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LORService.swift; sourceTree = "<group>"; };
 		E7236AF223E0D146008A1178 /* LORDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LORDAO.swift; sourceTree = "<group>"; };
 		E7236AF423E0D193008A1178 /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
@@ -212,6 +220,9 @@
 		E784253423EDAEDE0026A28C /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				42B66EA623F1CC2900985C5E /* OpenSans-Bold.ttf */,
+				42B66EA723F1CC2900985C5E /* OpenSans-Regular.ttf */,
+				42B66EAA23F1CC5300985C5E /* OpenSans-SemiBold.ttf */,
 				E784253223EDAEAA0026A28C /* Oswald-Regular.ttf */,
 			);
 			path = fonts;
@@ -263,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				E7236AF423E0D193008A1178 /* ServerError.swift */,
+				42B66EAD23F1ED8B00985C5E /* UIFont+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -370,6 +382,7 @@
 			files = (
 				E7AE297A23E0979600EBD3A9 /* LaunchScreen.storyboard in Resources */,
 				3E5DE5EE23EAFA9100452C91 /* CardSelect.xib in Resources */,
+				42B66EA823F1CC2E00985C5E /* OpenSans-Bold.ttf in Resources */,
 				E784253723F0A1780026A28C /* Filter.storyboard in Resources */,
 				E7AE297723E0979600EBD3A9 /* Assets.xcassets in Resources */,
 				E784253323EDAEAA0026A28C /* Oswald-Regular.ttf in Resources */,
@@ -377,10 +390,12 @@
 				E7AE297523E0979100EBD3A9 /* Main.storyboard in Resources */,
 				E784252323EAFD800026A28C /* CardDetails.storyboard in Resources */,
 				42052C6A23E99493009BDDF5 /* DecksStoryboard.storyboard in Resources */,
+				42B66EAB23F1CC5300985C5E /* OpenSans-SemiBold.ttf in Resources */,
 				3E5DE5EC23EAF93900452C91 /* DeckBuilder.storyboard in Resources */,
 				E7AE298723E09E6600EBD3A9 /* set1-en_us.json in Resources */,
 				E784252F23EDA8050026A28C /* TitleCell.xib in Resources */,
 				42052C7023EAE83D009BDDF5 /* DeckCell.xib in Resources */,
+				42B66EA923F1CC3200985C5E /* OpenSans-Regular.ttf in Resources */,
 				42052C6823E993D2009BDDF5 /* GalleryStoryboard.storyboard in Resources */,
 				42052C6623E9939C009BDDF5 /* ExploreStoryboard.storyboard in Resources */,
 			);
@@ -402,6 +417,7 @@
 				42B66EA523F1C09300985C5E /* ExploreViewController.swift in Sources */,
 				42052C7823EAFFDA009BDDF5 /* DecksViewController.swift in Sources */,
 				E784252523EB39440026A28C /* CardDetailsViewController.swift in Sources */,
+				42B66EAE23F1ED8B00985C5E /* UIFont+Extensions.swift in Sources */,
 				3E5DE5F423EC457200452C91 /* DeckCollectionViewCell.swift in Sources */,
 				E7AE297223E0979100EBD3A9 /* ViewController.swift in Sources */,
 				E7236AF323E0D146008A1178 /* LORDAO.swift in Sources */,
