@@ -14,8 +14,10 @@ class ViewController: UIViewController {
     var allGameCards: [Card]? = nil
     var filteredCards: [Card]? = nil
     
-    @IBOutlet weak var cardImageView: UIImageView!
     var changeCardsIndex: Int = 0
+    
+    
+    @IBOutlet weak var cardImageView: UIImageView!
     
     @IBOutlet weak var cardsSearchBar: UISearchBar!
     
@@ -34,7 +36,6 @@ class ViewController: UIViewController {
                 }
             }
         }
-        
     }
     
     
