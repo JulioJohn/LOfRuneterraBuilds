@@ -10,12 +10,24 @@ import Foundation
 import UIKit
 
 class DeckCell: UITableViewCell {
-
-    @IBOutlet weak var playStyleLabel: UILabel!
     
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var playStyleLabel: UILabel! {
+        didSet {
+            playStyleLabel.font = UIFont.scaledFont(for: "OpenSans-Regular", size: 11)
+        }
+    }
     
-    @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel! {
+        didSet {
+            nameLabel.font = UIFont.scaledFont(for: "Oswald-Regular", size: 17)
+        }
+    }
+    
+    @IBOutlet weak var userLabel: UILabel! {
+        didSet {
+            userLabel.font = UIFont.scaledFont(for: "OpenSans-Regular", size: 11)
+        }
+    }
     
     @IBOutlet weak var firstFaction: UIImageView!
     
@@ -25,16 +37,23 @@ class DeckCell: UITableViewCell {
         playStyleLabel.text = deck.playStyle.rawValue
         nameLabel.text = deck.name
         
-        guard let author = deck.author else {
+        if let author = deck.author {
+            let authorText = "by \(author)"
+            
+            let boldFont = UIFont.scaledFont(for: "OpenSans-Bold", size: 11)
+            let boldRange = NSString(string: authorText).range(of: "\(author)")
+            
+            let myMutableString = NSMutableAttributedString(string: authorText)
+            myMutableString.addAttribute(.font, value: boldFont, range: boldRange)
+            userLabel.attributedText = myMutableString
+        } else {
             userLabel.isHidden = true
-            return
         }
-        userLabel.text = "by \(author)"
         
         if deck.factions.count == 1 {
             guard let image = deck.factions[0].getImage() else { return }
             secondFaction.isHidden = true
-
+            
             firstFaction.image = image
             firstFaction.contentMode = .scaleAspectFill
         } else {
