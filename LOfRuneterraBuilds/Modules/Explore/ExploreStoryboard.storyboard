@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="coj-as-6na">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="coj-as-6na">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,6 @@
         <!--Navigation Controller-->
         <scene sceneID="wZz-z6-2mc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ojB-7C-Gr8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="coj-as-6na" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="bwt-mi-a7y">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -23,6 +22,7 @@
                         <segue destination="FN7-HT-xdD" kind="relationship" relationship="rootViewController" id="JCI-8K-hOl"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ojB-7C-Gr8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-955" y="49"/>
         </scene>
@@ -36,7 +36,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cTY-nH-hfM" customClass="TitleCellUIView" customModule="LOfRuneterraBuilds" customModuleProvider="target">
                                 <rect key="frame" x="20" y="16" width="374" height="39"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cTY-nH-hfM" secondAttribute="height" multiplier="374:39" id="OkD-OX-2jL"/>
                                 </constraints>
@@ -67,11 +67,22 @@
                     <connections>
                         <outlet property="tableView" destination="fRb-fB-USf" id="pdm-VW-PWe"/>
                         <outlet property="titleView" destination="cTY-nH-hfM" id="ZaJ-Tg-W3B"/>
+                        <segue destination="9Mb-S3-5Q3" kind="show" identifier="goToDeckDetail" id="01a-s3-tPq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3A-3W-oBd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="113" y="49"/>
+        </scene>
+        <!--DeckDetail-->
+        <scene sceneID="jGy-UW-hGi">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DeckDetail" id="9Mb-S3-5Q3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Uah-ez-Ady"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C3p-UZ-dcx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="707" y="49"/>
         </scene>
     </scenes>
     <resources>

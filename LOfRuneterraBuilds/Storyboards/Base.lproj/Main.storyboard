@@ -90,9 +90,9 @@
                         <color key="selectedImageTintColor" red="0.73943358660000003" green="0.57945376630000001" blue="0.35289275650000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
-                        <segue destination="0xe-4f-U06" kind="relationship" relationship="viewControllers" id="WwS-eA-8uE"/>
                         <segue destination="PRM-Zc-i1A" kind="relationship" relationship="viewControllers" id="5Ar-La-aDc"/>
                         <segue destination="yxk-22-bDM" kind="relationship" relationship="viewControllers" id="qeg-AW-pBj"/>
+                        <segue destination="0xe-4f-U06" kind="relationship" relationship="viewControllers" id="WwS-eA-8uE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TaJ-Ys-S4k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -38,6 +38,8 @@
 		E784253923F0A4E00026A28C /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784253823F0A4E00026A28C /* FilterViewController.swift */; };
 		E784253C23F18B170026A28C /* SaveDeck.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E784253B23F18B170026A28C /* SaveDeck.storyboard */; };
 		E784253E23F18C720026A28C /* SaveDeckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784253D23F18C720026A28C /* SaveDeckViewController.swift */; };
+		E784254223F1D9EA0026A28C /* DeckDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E784254123F1D9EA0026A28C /* DeckDetail.storyboard */; };
+		E784254423F1DA020026A28C /* DeckDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784254323F1DA020026A28C /* DeckDetailViewController.swift */; };
 		E7AE296E23E0979100EBD3A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE296D23E0979100EBD3A9 /* AppDelegate.swift */; };
 		E7AE297023E0979100EBD3A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE296F23E0979100EBD3A9 /* SceneDelegate.swift */; };
 		E7AE297223E0979100EBD3A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE297123E0979100EBD3A9 /* ViewController.swift */; };
@@ -47,6 +49,7 @@
 		E7AE298723E09E6600EBD3A9 /* set1-en_us.json in Resources */ = {isa = PBXBuildFile; fileRef = E7AE298623E09E6600EBD3A9 /* set1-en_us.json */; };
 		E7AE298923E09E9000EBD3A9 /* globals-en_us.json in Resources */ = {isa = PBXBuildFile; fileRef = E7AE298823E09E9000EBD3A9 /* globals-en_us.json */; };
 		E7AE298B23E09EED00EBD3A9 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE298A23E09EED00EBD3A9 /* Card.swift */; };
+		E7EE475123F1EAB700AB27C1 /* Pack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE475023F1EAB700AB27C1 /* Pack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +85,8 @@
 		E784253823F0A4E00026A28C /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		E784253B23F18B170026A28C /* SaveDeck.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SaveDeck.storyboard; sourceTree = "<group>"; };
 		E784253D23F18C720026A28C /* SaveDeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDeckViewController.swift; sourceTree = "<group>"; };
+		E784254123F1D9EA0026A28C /* DeckDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeckDetail.storyboard; sourceTree = "<group>"; };
+		E784254323F1DA020026A28C /* DeckDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckDetailViewController.swift; sourceTree = "<group>"; };
 		E7AE296A23E0979100EBD3A9 /* LOfRuneterraBuilds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOfRuneterraBuilds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7AE296D23E0979100EBD3A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7AE296F23E0979100EBD3A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +98,7 @@
 		E7AE298623E09E6600EBD3A9 /* set1-en_us.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "set1-en_us.json"; sourceTree = "<group>"; };
 		E7AE298823E09E9000EBD3A9 /* globals-en_us.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "globals-en_us.json"; sourceTree = "<group>"; };
 		E7AE298A23E09EED00EBD3A9 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		E7EE475023F1EAB700AB27C1 /* Pack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,7 @@
 		42052C6123E99288009BDDF5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E784254023F1D9D40026A28C /* DeckDetails */,
 				E784253A23F18AFE0026A28C /* SaveDeck */,
 				E784253523F0A1480026A28C /* Filter */,
 				E784252D23EDA7C50026A28C /* CustomViews */,
@@ -240,6 +247,15 @@
 			path = SaveDeck;
 			sourceTree = "<group>";
 		};
+		E784254023F1D9D40026A28C /* DeckDetails */ = {
+			isa = PBXGroup;
+			children = (
+				E784254123F1D9EA0026A28C /* DeckDetail.storyboard */,
+				E784254323F1DA020026A28C /* DeckDetailViewController.swift */,
+			);
+			path = DeckDetails;
+			sourceTree = "<group>";
+		};
 		E7AE296123E0979100EBD3A9 = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +306,7 @@
 				42052C7523EAEF33009BDDF5 /* PlayStyle.swift */,
 				E784251F23EAE41D0026A28C /* Filter.swift */,
 				E784252823EC40B70026A28C /* CardInfos.swift */,
+				E7EE475023F1EAB700AB27C1 /* Pack.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -397,6 +414,7 @@
 				E784252F23EDA8050026A28C /* TitleCell.xib in Resources */,
 				42052C7023EAE83D009BDDF5 /* DeckCell.xib in Resources */,
 				42052C6823E993D2009BDDF5 /* GalleryStoryboard.storyboard in Resources */,
+				E784254223F1D9EA0026A28C /* DeckDetail.storyboard in Resources */,
 				42052C6623E9939C009BDDF5 /* ExploreStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +440,7 @@
 				E7236AF323E0D146008A1178 /* LORDAO.swift in Sources */,
 				3E5DE5F023EB0C2E00452C91 /* CardSelectController.swift in Sources */,
 				E784253123EDA8990026A28C /* TitleCellUIView.swift in Sources */,
+				E7EE475123F1EAB700AB27C1 /* Pack.swift in Sources */,
 				E7AE296E23E0979100EBD3A9 /* AppDelegate.swift in Sources */,
 				3E5DE5F223EC442E00452C91 /* DeckBuilderController.swift in Sources */,
 				E7AE297023E0979100EBD3A9 /* SceneDelegate.swift in Sources */,
@@ -430,6 +449,7 @@
 				E7AE298B23E09EED00EBD3A9 /* Card.swift in Sources */,
 				E784252723EB4E550026A28C /* CardDetailTableViewCell.swift in Sources */,
 				E784253E23F18C720026A28C /* SaveDeckViewController.swift in Sources */,
+				E784254423F1DA020026A28C /* DeckDetailViewController.swift in Sources */,
 				E7236AF523E0D193008A1178 /* ServerError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
