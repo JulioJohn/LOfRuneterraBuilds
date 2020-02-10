@@ -15,23 +15,37 @@ class DeckBuilderController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var cardsAmount: UILabel!
+    @IBOutlet weak var selectedFilters: UIView!
+    @IBOutlet weak var labelFilter: UILabel!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     
     var myServices: LORService = LORService()
     var gameCards: [Card]? = nil
-    
     var selectedCard: Card? = nil
+    var filteredCards: [Card]? = nil
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setUp()
+    }
+    
+    
+    func setUp(){
         setUpCollection()
         setUpJSON()
+        setUpFilterPin()
+        setUpSearchBar()
+        
     }
     
     
     func setUpCollection(){
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        self.collectionView.dataSource = self
+        self.collectionView.delegate = self
+        self.searchBar.delegate = self
     }
     
     
@@ -42,6 +56,7 @@ class DeckBuilderController: UIViewController {
                 return
             }
             self.gameCards = cards
+            self.filteredCards = self.gameCards
             
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
@@ -49,9 +64,27 @@ class DeckBuilderController: UIViewController {
         }
     }
     
-    @IBAction func cartButton(_ sender: UIButton) {
-        
+    
+    //TODO: Change the textfield.background color to the app background color
+    func setUpSearchBar(){
+        if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
+            textfield.textColor = UIColor.white
+            textfield.backgroundColor = UIColor.darkGray
+        }
     }
+    
+    
+    func setUpFilterPin(){
+        makeCirle(view: self.selectedFilters)
+        self.selectedFilters.isHidden = true
+        self.labelFilter.isHidden = true
+    }
+    
+    
+    @IBAction func cartButton(_ sender: UIButton) {
+        //TODO: segue to CardEditing
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToCardDetails" {
@@ -63,8 +96,12 @@ class DeckBuilderController: UIViewController {
         }
     }
     
+    
+    func makeCirle(view: UIView){
+        view.layer.cornerRadius = view.frame.size.width/2
+        view.clipsToBounds = true
+    }
 }
-
 
 
 
@@ -75,7 +112,7 @@ extension DeckBuilderController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let amount = self.gameCards {
+        if let amount = self.filteredCards {
             return (amount.count / 2) - 1
         }
         return 0
@@ -83,11 +120,10 @@ extension DeckBuilderController: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "deckBuilderCell", for: indexPath) as! DeckCollectionViewCell
-        if let gameCards = self.gameCards {
+        if let gameCards = self.filteredCards {
             cell.cardSelect.card = gameCards[indexPath.row]
             cell.cardSelect.cardSetUp()
         }
-        
         cell.cardSelect.delegate = self
         
         return cell
@@ -107,5 +143,23 @@ extension DeckBuilderController: CardSelectDelegate {
     
     func removeCard(for card: Card) {
         print("Removeu!!!")
+    }
+}
+
+
+extension DeckBuilderController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty == false {
+            self.filteredCards = self.gameCards
+            
+            self.filteredCards = Filter(name: searchText, regions: nil, cost: nil).filterForName(allCards: gameCards!)
+            
+            self.collectionView.reloadData()
+        }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.searchBar.endEditing(true)
     }
 }

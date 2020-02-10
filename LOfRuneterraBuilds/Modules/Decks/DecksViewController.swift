@@ -15,6 +15,8 @@ class DeckViewController: UIViewController {
     
     @IBOutlet weak var titleView: TitleCellUIView!
     
+    var selectedDeckIndex: Int? = nil
+    
     var decks: [Deck] = {
         let d1 = Deck(author: "You", name: "Teste 1", factions: [.demacia, .freljord], playStyle: .midrange)
         
@@ -55,7 +57,18 @@ class DeckViewController: UIViewController {
 }
 
 extension DeckViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedDeckIndex = indexPath.row
+        performSegue(withIdentifier: "goToDeckDetail", sender: nil)
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToDeckDetail" {
+            if let vc = segue.destination as? DeckDetailViewController, let index = self.selectedDeckIndex {
+                vc.deck = decks[index]
+            }
+        }
+    }
 }
 
 extension DeckViewController: UITableViewDataSource {
