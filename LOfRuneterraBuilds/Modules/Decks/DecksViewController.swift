@@ -13,18 +13,20 @@ class DeckViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var titleView: TitleCellUIView!
+    
     var decks: [Deck] = {
-        let d1 = Deck(name: "Teste 1", factions: [.demacia], playStyle: .aggro)
+        let d1 = Deck(author: "You", name: "Teste 1", factions: [.demacia, .freljord], playStyle: .midrange)
         
-        let d2 = Deck(name: "Teste 2", factions: [.demacia, .freljord], playStyle: .aggro)
+        let d2 = Deck(author: "You", name: "Teste 2", factions: [.demacia, .freljord], playStyle: .aggro)
         
-        let d3 = Deck(name: "Teste 2", factions: [.demacia, .freljord], playStyle: .aggro)
+        let d3 = Deck(author: "You", name: "Teste 3", factions: [.demacia, .ionia], playStyle: .aggro)
 
-        let d4 = Deck(name: "Teste 2", factions: [.demacia, .freljord], playStyle: .aggro)
+        let d4 = Deck(author: "You", name: "Teste 4", factions: [.demacia, .noxus], playStyle: .aggro)
 
-        let d5 = Deck(name: "Teste 2", factions: [.demacia, .freljord], playStyle: .aggro)
+        let d5 = Deck(author: "You", name: "Teste 5", factions: [.demacia, .piltoverAndZaun], playStyle: .aggro)
 
-        let d6 = Deck(name: "Teste 2", factions: [.demacia, .freljord], playStyle: .aggro)
+        let d6 = Deck(author: "You", name: "Teste 6", factions: [.demacia, .shadowIsles], playStyle: .aggro)
 
         return [d1, d2, d3, d4, d5, d6]
     }()
@@ -33,6 +35,7 @@ class DeckViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        titleView.titleLabel.text = "My Decks"
         setupTableView()
     }
     
@@ -44,30 +47,8 @@ class DeckViewController: UIViewController {
         let nib = UINib.init(nibName: "DeckCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "deckCell")
         
-//        createTableViewFooter()
+        tableView.backgroundColor = UIColor(displayP3Red: 42/255, green: 38/255, blue: 42/255, alpha: 1)
     }
-    
-    func createTableViewFooter() {
-        let customView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 50))
-        
-        let button = UIButton()
-        button.setTitle("Create New Deck", for: .normal)
-        button.setTitleColor(UIColor.black, for: .normal)
-        button.backgroundColor = UIColor(red: 189/255, green: 148/255, blue: 91/255, alpha: 1)
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        customView.addSubview(button)
-        
-        //Adding constraints
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.topAnchor.constraint(equalTo: customView.topAnchor).isActive = true
-        button.bottomAnchor.constraint(equalTo: customView.bottomAnchor).isActive = true
-        button.leadingAnchor.constraint(equalTo: customView.leadingAnchor, constant: 20).isActive = true
-        button.trailingAnchor.constraint(equalTo: customView.trailingAnchor, constant: -20).isActive = true
-        button.layer.cornerRadius = 6
-
-        tableView.tableFooterView = customView
-    }
-    
     @objc func buttonAction(_ sender: UIButton!) {
         performSegue(withIdentifier: "goToDeckBuilder", sender: nil)
     }
@@ -87,7 +68,7 @@ extension DeckViewController: UITableViewDataSource {
         let customView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 50))
         
         let button = UIButton()
-        button.setTitle("Create New Deck", for: .normal)
+        button.setTitle("Build New Deck", for: .normal)
         button.setTitleColor(UIColor.black, for: .normal)
         button.backgroundColor = UIColor(red: 189/255, green: 148/255, blue: 91/255, alpha: 1)
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
@@ -114,8 +95,4 @@ extension DeckViewController: UITableViewDataSource {
         cell.configure(for: decks[indexPath.row])
         return cell
     }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 200
-//    }
 }
