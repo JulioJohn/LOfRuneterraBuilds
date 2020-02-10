@@ -21,6 +21,7 @@
 		42052C7423EAE8FD009BDDF5 /* Faction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42052C7323EAE8FD009BDDF5 /* Faction.swift */; };
 		42052C7623EAEF33009BDDF5 /* PlayStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42052C7523EAEF33009BDDF5 /* PlayStyle.swift */; };
 		42052C7823EAFFDA009BDDF5 /* DecksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42052C7723EAFFDA009BDDF5 /* DecksViewController.swift */; };
+		42B66EA523F1C09300985C5E /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B66EA423F1C09300985C5E /* ExploreViewController.swift */; };
 		E7236AF123E0D132008A1178 /* LORService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7236AF023E0D132008A1178 /* LORService.swift */; };
 		E7236AF323E0D146008A1178 /* LORDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7236AF223E0D146008A1178 /* LORDAO.swift */; };
 		E7236AF523E0D193008A1178 /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7236AF423E0D193008A1178 /* ServerError.swift */; };
@@ -59,6 +60,7 @@
 		42052C7323EAE8FD009BDDF5 /* Faction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faction.swift; sourceTree = "<group>"; };
 		42052C7523EAEF33009BDDF5 /* PlayStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayStyle.swift; sourceTree = "<group>"; };
 		42052C7723EAFFDA009BDDF5 /* DecksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecksViewController.swift; sourceTree = "<group>"; };
+		42B66EA423F1C09300985C5E /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		E7236AF023E0D132008A1178 /* LORService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LORService.swift; sourceTree = "<group>"; };
 		E7236AF223E0D146008A1178 /* LORDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LORDAO.swift; sourceTree = "<group>"; };
 		E7236AF423E0D193008A1178 /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				42052C6523E9939C009BDDF5 /* ExploreStoryboard.storyboard */,
+				42B66EA423F1C09300985C5E /* ExploreViewController.swift */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				42052C7623EAEF33009BDDF5 /* PlayStyle.swift in Sources */,
 				42052C6E23EAE831009BDDF5 /* DeckCell.swift in Sources */,
 				E7236AF123E0D132008A1178 /* LORService.swift in Sources */,
+				42B66EA523F1C09300985C5E /* ExploreViewController.swift in Sources */,
 				42052C7823EAFFDA009BDDF5 /* DecksViewController.swift in Sources */,
 				E784252523EB39440026A28C /* CardDetailsViewController.swift in Sources */,
 				3E5DE5F423EC457200452C91 /* DeckCollectionViewCell.swift in Sources */,

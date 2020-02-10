@@ -16,17 +16,17 @@ class DeckViewController: UIViewController {
     @IBOutlet weak var titleView: TitleCellUIView!
     
     var decks: [Deck] = {
-        let d1 = Deck(name: "Teste 1", factions: [.demacia], playStyle: .aggro)
+        let d1 = Deck(author: "You", name: "Teste 1", factions: [.demacia, .freljord], playStyle: .midrange)
         
-        let d2 = Deck(name: "Teste 2", factions: [.demacia, .freljord], playStyle: .aggro)
+        let d2 = Deck(author: "You", name: "Teste 2", factions: [.demacia, .freljord], playStyle: .aggro)
         
-        let d3 = Deck(name: "Teste 2", factions: [.demacia, .ionia], playStyle: .aggro)
+        let d3 = Deck(author: "You", name: "Teste 3", factions: [.demacia, .ionia], playStyle: .aggro)
 
-        let d4 = Deck(name: "Teste 2", factions: [.demacia, .noxus], playStyle: .aggro)
+        let d4 = Deck(author: "You", name: "Teste 4", factions: [.demacia, .noxus], playStyle: .aggro)
 
-        let d5 = Deck(name: "Teste 2", factions: [.demacia, .piltoverAndZaun], playStyle: .aggro)
+        let d5 = Deck(author: "You", name: "Teste 5", factions: [.demacia, .piltoverAndZaun], playStyle: .aggro)
 
-        let d6 = Deck(name: "Teste 2", factions: [.demacia, .shadowIsles], playStyle: .aggro)
+        let d6 = Deck(author: "You", name: "Teste 6", factions: [.demacia, .shadowIsles], playStyle: .aggro)
 
         return [d1, d2, d3, d4, d5, d6]
     }()
