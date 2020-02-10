@@ -180,9 +180,44 @@
                                                     <segue destination="qjF-0o-UIX" kind="presentation" modalPresentationStyle="fullScreen" id="aKd-Z8-OL4"/>
                                                 </connections>
                                             </button>
+                                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WXd-hN-tpy">
+                                                <rect key="frame" x="364" y="3" width="46" height="39"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="82m-tn-yOG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wee-e7-5Kb">
+                                                                <rect key="frame" x="2" y="0.0" width="14" height="18"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="Wee-e7-5Kb" secondAttribute="height" multiplier="7:9" id="JAy-m1-KsK"/>
+                                                                    <constraint firstAttribute="height" constant="18" id="XP5-Fc-D3F"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="18" id="EaS-I9-Mwe"/>
+                                                            <constraint firstAttribute="width" secondItem="82m-tn-yOG" secondAttribute="height" multiplier="1:1" id="Ga9-WS-UY6"/>
+                                                            <constraint firstItem="Wee-e7-5Kb" firstAttribute="centerY" secondItem="82m-tn-yOG" secondAttribute="centerY" id="uDm-ba-KfB"/>
+                                                            <constraint firstItem="Wee-e7-5Kb" firstAttribute="centerX" secondItem="82m-tn-yOG" secondAttribute="centerX" id="vFC-17-18p"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="82m-tn-yOG" firstAttribute="leading" secondItem="WXd-hN-tpy" secondAttribute="leading" id="BkB-aD-1Ap"/>
+                                                    <constraint firstAttribute="height" constant="39" id="Sq6-Kz-UPq"/>
+                                                    <constraint firstAttribute="width" secondItem="WXd-hN-tpy" secondAttribute="height" multiplier="46:39" id="lMm-Pv-IyR"/>
+                                                    <constraint firstItem="82m-tn-yOG" firstAttribute="top" secondItem="WXd-hN-tpy" secondAttribute="top" id="paw-WA-uN2"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="WXd-hN-tpy" firstAttribute="centerX" secondItem="S9e-tC-XfG" secondAttribute="centerX" constant="2" id="10p-oq-2ch"/>
                                             <constraint firstItem="mQA-Qg-A5M" firstAttribute="centerY" secondItem="N7u-pe-fF0" secondAttribute="centerY" id="91B-Uk-mNg"/>
                                             <constraint firstAttribute="trailing" secondItem="S9e-tC-XfG" secondAttribute="trailing" constant="17" id="Fgh-lG-yMv"/>
                                             <constraint firstItem="S9e-tC-XfG" firstAttribute="leading" secondItem="mQA-Qg-A5M" secondAttribute="trailing" constant="20" id="Pa4-7S-OER"/>
@@ -190,6 +225,7 @@
                                             <constraint firstItem="mQA-Qg-A5M" firstAttribute="leading" secondItem="N7u-pe-fF0" secondAttribute="leading" id="fjy-64-A9a"/>
                                             <constraint firstAttribute="width" secondItem="N7u-pe-fF0" secondAttribute="height" multiplier="46:5" id="g7I-Ct-foC"/>
                                             <constraint firstAttribute="height" constant="45" id="hHW-mz-yYW"/>
+                                            <constraint firstItem="WXd-hN-tpy" firstAttribute="centerY" secondItem="N7u-pe-fF0" secondAttribute="centerY" id="wCO-KR-PfK"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -232,6 +268,9 @@
                     <connections>
                         <outlet property="cardsAmount" destination="UwC-Vn-TCt" id="p7B-kx-WLF"/>
                         <outlet property="collectionView" destination="e1x-Th-3zN" id="YcS-dY-TcV"/>
+                        <outlet property="labelFilter" destination="Wee-e7-5Kb" id="QDT-eI-0Fa"/>
+                        <outlet property="searchBar" destination="mQA-Qg-A5M" id="LHb-3E-nZc"/>
+                        <outlet property="selectedFilters" destination="82m-tn-yOG" id="7XL-Ls-Y7d"/>
                         <segue destination="h3L-1t-Rkt" kind="show" identifier="goToCardDetails" id="xSU-U8-NjW"/>
                     </connections>
                 </viewController>
