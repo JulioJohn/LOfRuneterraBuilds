@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  LOfRuneterraBuilds
+
+  Created by Guilherme Tavares Shimamoto on 10/02/20.
+  Copyright © 2020 Júlio John Tavares Ramos. All rights reserved.
+*/
+
+"by User" = "by %@";
+"My Decks" = "My Decks";
+"Build New Deck" = "Build New Deck";

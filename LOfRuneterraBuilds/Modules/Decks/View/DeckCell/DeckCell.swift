@@ -38,7 +38,7 @@ class DeckCell: UITableViewCell {
         nameLabel.text = deck.name
         
         if let author = deck.author {
-            let authorText = "by \(author)"
+            let authorText = String(format: NSLocalizedString("by User", comment: ""), "\(author)")
             
             let boldFont = UIFont.scaledFont(for: "OpenSans-Bold", size: 11)
             let boldRange = NSString(string: authorText).range(of: "\(author)")

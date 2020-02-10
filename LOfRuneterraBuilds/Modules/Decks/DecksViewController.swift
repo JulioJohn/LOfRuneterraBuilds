@@ -37,7 +37,9 @@ class DeckViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleView.titleLabel.text = "My Decks"
+        let title = NSLocalizedString("My Decks", comment: "")
+        self.title = title
+        titleView.titleLabel.text = title
         setupTableView()
     }
     
@@ -81,7 +83,10 @@ extension DeckViewController: UITableViewDataSource {
         let customView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 50))
         
         let button = UIButton()
-        button.setTitle("Build New Deck", for: .normal)
+        let title = NSLocalizedString("Build New Deck", comment: "")
+        button.titleLabel?.font = UIFont.scaledFont(for: "OpenSans-SemiBold", size: 17)
+        button.titleLabel?.adjustsFontSizeToFitWidth = true
+        button.setTitle(title, for: .normal)
         button.setTitleColor(UIColor.black, for: .normal)
         button.backgroundColor = UIColor(red: 189/255, green: 148/255, blue: 91/255, alpha: 1)
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
