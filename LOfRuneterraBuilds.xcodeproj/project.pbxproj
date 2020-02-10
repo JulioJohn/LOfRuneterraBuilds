@@ -118,7 +118,6 @@
 		42052C6123E99288009BDDF5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				E784253A23F18AFE0026A28C /* SaveDeck */,
 				E784253523F0A1480026A28C /* Filter */,
 				E784252D23EDA7C50026A28C /* CustomViews */,
 				42052C6423E992BB009BDDF5 /* Explore */,
@@ -133,6 +132,7 @@
 		42052C6223E992A4009BDDF5 /* Decks */ = {
 			isa = PBXGroup;
 			children = (
+				E784253A23F18AFE0026A28C /* SaveDeck */,
 				42052C6B23EAE713009BDDF5 /* View */,
 				42052C6923E99493009BDDF5 /* DecksStoryboard.storyboard */,
 				42052C7723EAFFDA009BDDF5 /* DecksViewController.swift */,
