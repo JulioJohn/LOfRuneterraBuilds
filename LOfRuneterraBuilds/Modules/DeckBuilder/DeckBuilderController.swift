@@ -37,6 +37,8 @@ class DeckBuilderController: UIViewController {
         setUpCollection()
         setUpJSON()
         setUpFilterPin()
+        setUpSearchBar()
+        
     }
     
     
@@ -59,6 +61,15 @@ class DeckBuilderController: UIViewController {
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
             }
+        }
+    }
+    
+    
+    //TODO: Change the textfield.background color to the app background color
+    func setUpSearchBar(){
+        if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
+            textfield.textColor = UIColor.white
+            textfield.backgroundColor = UIColor.darkGray
         }
     }
     

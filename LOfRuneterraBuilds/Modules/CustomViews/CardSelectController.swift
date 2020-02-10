@@ -70,9 +70,4 @@ class CardSelectController: UIView {
     @IBAction func goToCardDetail(_ sender: UIButton) {
         delegate?.goToCardDetails(for: card!)
     }
-    
-    func makeCirle(button: UIButton){
-        button.layer.cornerRadius = button.frame.size.width/2
-        button.clipsToBounds = true
-    }
 }

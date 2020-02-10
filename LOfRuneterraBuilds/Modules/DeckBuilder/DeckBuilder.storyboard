@@ -162,6 +162,7 @@
                                         <subviews>
                                             <searchBar contentMode="redraw" placeholder="Search" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQA-Qg-A5M">
                                                 <rect key="frame" x="0.0" y="0.5" width="353" height="44"/>
+                                                <color key="backgroundColor" red="0.90257823469999998" green="0.94030672309999996" blue="0.98824340109999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="mQA-Qg-A5M" secondAttribute="height" multiplier="353:44" id="qLz-g8-YXA"/>
                                                     <constraint firstAttribute="width" constant="353" id="yCa-Ld-dfB"/>
@@ -197,7 +198,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.73943358660000003" green="0.57945376630000001" blue="0.35289275650000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="18" id="EaS-I9-Mwe"/>
                                                             <constraint firstAttribute="width" secondItem="82m-tn-yOG" secondAttribute="height" multiplier="1:1" id="Ga9-WS-UY6"/>
