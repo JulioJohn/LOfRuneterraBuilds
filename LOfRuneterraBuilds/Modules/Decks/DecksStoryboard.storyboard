@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qZo-ZI-idq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qZo-ZI-idq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,17 +15,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vyV-t2-1zg" customClass="TitleCellUIView" customModule="LOfRuneterraBuilds" customModuleProvider="target">
+                                <rect key="frame" x="20" y="16" width="374" height="39"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vyV-t2-1zg" secondAttribute="height" multiplier="374:39" id="HdG-tU-nEY"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XYd-br-0u3">
-                                <rect key="frame" x="0.0" y="32" width="414" height="693"/>
+                                <rect key="frame" x="0.0" y="71" width="414" height="638"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.16470588235294117" green="0.14901960784313725" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="9Tf-7E-LAR" firstAttribute="bottom" secondItem="XYd-br-0u3" secondAttribute="bottom" id="5ll-qj-lAC"/>
+                            <constraint firstItem="9Tf-7E-LAR" firstAttribute="bottom" secondItem="XYd-br-0u3" secondAttribute="bottom" constant="16" id="5ll-qj-lAC"/>
+                            <constraint firstItem="9Tf-7E-LAR" firstAttribute="top" secondItem="vyV-t2-1zg" secondAttribute="top" constant="-16" id="MzC-Sn-aPx"/>
+                            <constraint firstItem="9Tf-7E-LAR" firstAttribute="trailing" secondItem="vyV-t2-1zg" secondAttribute="trailing" constant="20" id="WAX-K3-52Q"/>
                             <constraint firstItem="9Tf-7E-LAR" firstAttribute="trailing" secondItem="XYd-br-0u3" secondAttribute="trailing" id="Zcf-A0-SWT"/>
-                            <constraint firstItem="XYd-br-0u3" firstAttribute="top" secondItem="9Tf-7E-LAR" secondAttribute="top" constant="32" id="d0h-Ti-wzj"/>
+                            <constraint firstItem="vyV-t2-1zg" firstAttribute="leading" secondItem="9Tf-7E-LAR" secondAttribute="leading" constant="20" id="dhf-z4-maZ"/>
                             <constraint firstItem="XYd-br-0u3" firstAttribute="leading" secondItem="9Tf-7E-LAR" secondAttribute="leading" id="fHO-bv-LE6"/>
+                            <constraint firstItem="XYd-br-0u3" firstAttribute="top" secondItem="vyV-t2-1zg" secondAttribute="bottom" constant="16" id="hZy-1k-4xr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Tf-7E-LAR"/>
                     </view>
@@ -36,6 +46,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="XYd-br-0u3" id="i2F-7C-HWb"/>
+                        <outlet property="titleView" destination="vyV-t2-1zg" id="Mhl-th-3PB"/>
                         <segue destination="hZf-eN-gg8" kind="show" identifier="goToDeckBuilder" id="7S5-2n-pj1"/>
                     </connections>
                 </viewController>
