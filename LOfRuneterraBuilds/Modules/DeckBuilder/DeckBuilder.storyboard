@@ -176,6 +176,9 @@
                                                     <constraint firstAttribute="width" secondItem="S9e-tC-XfG" secondAttribute="height" multiplier="12:11" id="hAa-JD-YkK"/>
                                                 </constraints>
                                                 <state key="normal" image="Symbol"/>
+                                                <connections>
+                                                    <segue destination="qjF-0o-UIX" kind="presentation" modalPresentationStyle="fullScreen" id="aKd-Z8-OL4"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -246,13 +249,15 @@
             </objects>
             <point key="canvasLocation" x="1329" y="-466"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--Filter-->
         <scene sceneID="NNC-PS-QxX">
             <objects>
-                <viewControllerPlaceholder id="qjF-0o-UIX" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Filter" id="qjF-0o-UIX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="lKd-ej-6ab"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aUh-SI-JN9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1373" y="-269"/>
+            <point key="canvasLocation" x="1328" y="-617"/>
         </scene>
     </scenes>
     <resources>
