@@ -20,13 +20,13 @@ class DeckViewController: UIViewController {
         
         let d2 = Deck(name: "Teste 2", factions: [.demacia, .freljord], playStyle: .aggro)
         
-        let d3 = Deck(name: "Teste 2", factions: [.demacia, .freljord], playStyle: .aggro)
+        let d3 = Deck(name: "Teste 2", factions: [.demacia, .ionia], playStyle: .aggro)
 
-        let d4 = Deck(name: "Teste 2", factions: [.demacia, .freljord], playStyle: .aggro)
+        let d4 = Deck(name: "Teste 2", factions: [.demacia, .noxus], playStyle: .aggro)
 
-        let d5 = Deck(name: "Teste 2", factions: [.demacia, .freljord], playStyle: .aggro)
+        let d5 = Deck(name: "Teste 2", factions: [.demacia, .piltoverAndZaun], playStyle: .aggro)
 
-        let d6 = Deck(name: "Teste 2", factions: [.demacia, .freljord], playStyle: .aggro)
+        let d6 = Deck(name: "Teste 2", factions: [.demacia, .shadowIsles], playStyle: .aggro)
 
         return [d1, d2, d3, d4, d5, d6]
     }()

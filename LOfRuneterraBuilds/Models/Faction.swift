@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum Faction: String {
     case demacia = "DE"
@@ -15,4 +16,22 @@ enum Faction: String {
     case noxus = "NX"
     case piltoverAndZaun = "PZ"
     case shadowIsles = "SI"
+    
+    func getImage() -> UIImage? {
+        switch self {
+        case .demacia:
+            return UIImage(named: "icon-demacia")
+        case .freljord:
+            return UIImage(named: "icon-freljord")
+        case .ionia:
+            return UIImage(named: "icon-ionia")
+        case .noxus:
+            return UIImage(named: "icon-noxus")
+        case .piltoverAndZaun:
+            return UIImage(named: "icon-piltoverzaun")
+        case .shadowIsles:
+            return UIImage(named: "icon-shadowisles")
+        }
+    }
+    
 }
