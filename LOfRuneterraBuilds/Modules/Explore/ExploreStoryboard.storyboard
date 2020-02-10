@@ -1,26 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FN7-HT-xdD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="coj-as-6na">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="wZz-z6-2mc">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ojB-7C-Gr8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="coj-as-6na" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="bwt-mi-a7y">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="FN7-HT-xdD" kind="relationship" relationship="rootViewController" id="JCI-8K-hOl"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-955" y="49"/>
+        </scene>
         <!--Explore-->
         <scene sceneID="zra-7q-nMp">
             <objects>
-                <viewController id="FN7-HT-xdD" sceneMemberID="viewController">
+                <viewController id="FN7-HT-xdD" customClass="ExploreViewController" customModule="LOfRuneterraBuilds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z9X-iI-067">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cTY-nH-hfM" customClass="TitleCellUIView" customModule="LOfRuneterraBuilds" customModuleProvider="target">
+                                <rect key="frame" x="20" y="16" width="374" height="39"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cTY-nH-hfM" secondAttribute="height" multiplier="374:39" id="OkD-OX-2jL"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fRb-fB-USf">
+                                <rect key="frame" x="0.0" y="71" width="414" height="654"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1647058824" green="0.14901960780000001" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="vIO-Tt-r1P" firstAttribute="top" secondItem="cTY-nH-hfM" secondAttribute="top" constant="-16" id="0gg-SC-b0e"/>
+                            <constraint firstItem="fRb-fB-USf" firstAttribute="bottom" secondItem="vIO-Tt-r1P" secondAttribute="bottom" id="6nQ-ba-JVe"/>
+                            <constraint firstItem="fRb-fB-USf" firstAttribute="leading" secondItem="vIO-Tt-r1P" secondAttribute="leading" id="CQS-rC-SxG"/>
+                            <constraint firstItem="vIO-Tt-r1P" firstAttribute="trailing" secondItem="cTY-nH-hfM" secondAttribute="trailing" constant="20" id="HAc-Sn-brb"/>
+                            <constraint firstItem="cTY-nH-hfM" firstAttribute="width" secondItem="cTY-nH-hfM" secondAttribute="height" multiplier="374:39" id="IY9-5Z-7qD"/>
+                            <constraint firstItem="fRb-fB-USf" firstAttribute="trailing" secondItem="vIO-Tt-r1P" secondAttribute="trailing" id="UZf-6b-HBY"/>
+                            <constraint firstItem="cTY-nH-hfM" firstAttribute="leading" secondItem="vIO-Tt-r1P" secondAttribute="leading" constant="20" id="UdX-MP-j51"/>
+                            <constraint firstItem="fRb-fB-USf" firstAttribute="top" secondItem="cTY-nH-hfM" secondAttribute="bottom" constant="16" id="fIE-9M-xrK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vIO-Tt-r1P"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Explore" image="Explore" selectedImage="Explore" id="p0g-6h-qpG">
                         <color key="badgeColor" red="0.73943358660000003" green="0.57945376630000001" blue="0.35289275650000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" title="Explore" id="eXb-wl-JmX"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="fRb-fB-USf" id="pdm-VW-PWe"/>
+                        <outlet property="titleView" destination="cTY-nH-hfM" id="ZaJ-Tg-W3B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3A-3W-oBd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

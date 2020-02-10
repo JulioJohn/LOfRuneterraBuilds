@@ -9,6 +9,7 @@
 import Foundation
 
 struct Deck {
+    var author: String?
     var cards: [Card] = []
     var name: String
     var factions: [Faction]
