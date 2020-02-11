@@ -6,6 +6,13 @@
   Copyright © 2020 Júlio John Tavares Ramos. All rights reserved.
 */
 
+//Deck Cell
 "by User" = "by %@";
+
+//Decks
 "My Decks" = "My Decks";
 "Build New Deck" = "Build New Deck";
+
+//Explore
+"Explore" = "Explore";
+"Explore the Best Decks" = "Explore the Best Decks";

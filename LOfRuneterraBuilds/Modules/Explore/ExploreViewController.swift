@@ -40,7 +40,8 @@ class ExploreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleView.titleLabel.text = "Explore the Best Decks"
+        self.title = NSLocalizedString("Explore", comment: "")
+        titleView.titleLabel.text = NSLocalizedString("Explore the Best Decks", comment: "")
         setupTableView()
     }
     
