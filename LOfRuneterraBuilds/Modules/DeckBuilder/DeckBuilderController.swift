@@ -44,7 +44,14 @@ class DeckBuilderController: UIViewController {
         super.viewDidLoad()
         
         titleView.titleLabel.text = NSLocalizedString("Choose Your Cards", comment: "")
-        self.title = NSLocalizedString("Choose Cards", comment: "")
+        
+        let screenTitle = NSLocalizedString("Choose Cards", comment: "")
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = screenTitle
+        
+        self.title = screenTitle
+        self.navigationItem.backBarButtonItem = backItem
         
         setUp()
     }

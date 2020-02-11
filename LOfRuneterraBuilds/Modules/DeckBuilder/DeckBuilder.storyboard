@@ -258,9 +258,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Wa9-xA-KkK"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Choose Cards" id="FSG-t0-Ivk">
-                        <barButtonItem key="backBarButtonItem" title="My Decks" id="7Hh-gb-rjK"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Choose Cards" id="FSG-t0-Ivk"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
                     <connections>
