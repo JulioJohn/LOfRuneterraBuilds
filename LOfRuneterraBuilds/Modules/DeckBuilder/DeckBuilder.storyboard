@@ -78,7 +78,7 @@
                                                 <rect key="frame" x="15" y="16" width="384" height="43"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UwC-Vn-TCt">
-                                                        <rect key="frame" x="284" y="11" width="44" height="21"/>
+                                                        <rect key="frame" x="285" y="11" width="44" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="UwC-Vn-TCt" secondAttribute="height" multiplier="44:21" id="Q8J-45-uU7"/>
                                                         </constraints>
@@ -87,11 +87,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show my deck" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIh-lR-PKa">
-                                                        <rect key="frame" x="12" y="9.5" width="138" height="24"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="24" id="1bn-DN-YJS"/>
-                                                            <constraint firstAttribute="width" secondItem="hIh-lR-PKa" secondAttribute="height" multiplier="23:4" id="vIx-X2-W4L"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="12" y="11.5" width="257" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -121,14 +117,15 @@
                                                     <constraint firstItem="DjQ-X8-xcK" firstAttribute="height" secondItem="nL4-LP-fCR" secondAttribute="height" id="DbO-rv-6rg"/>
                                                     <constraint firstItem="DjQ-X8-xcK" firstAttribute="width" secondItem="nL4-LP-fCR" secondAttribute="height" multiplier="383:43" id="EHo-Yh-eYf"/>
                                                     <constraint firstItem="hIh-lR-PKa" firstAttribute="centerY" secondItem="nL4-LP-fCR" secondAttribute="centerY" id="HFa-Gu-Z6m"/>
+                                                    <constraint firstItem="4mH-Ru-gFM" firstAttribute="leading" secondItem="UwC-Vn-TCt" secondAttribute="trailing" constant="16" id="Hal-2N-XMF"/>
                                                     <constraint firstItem="DjQ-X8-xcK" firstAttribute="centerX" secondItem="nL4-LP-fCR" secondAttribute="centerX" id="Hwi-QT-YrI"/>
                                                     <constraint firstAttribute="width" secondItem="nL4-LP-fCR" secondAttribute="height" multiplier="384:43" id="OWF-3d-Ig1"/>
                                                     <constraint firstAttribute="trailing" secondItem="4mH-Ru-gFM" secondAttribute="trailing" constant="14" id="SrQ-Dn-uaV"/>
                                                     <constraint firstAttribute="width" constant="384" id="XTm-ad-l6p"/>
                                                     <constraint firstItem="DjQ-X8-xcK" firstAttribute="centerY" secondItem="nL4-LP-fCR" secondAttribute="centerY" id="cHM-vk-wkb"/>
                                                     <constraint firstItem="UwC-Vn-TCt" firstAttribute="centerY" secondItem="nL4-LP-fCR" secondAttribute="centerY" id="cW3-2d-VpV"/>
-                                                    <constraint firstItem="UwC-Vn-TCt" firstAttribute="trailing" secondItem="4mH-Ru-gFM" secondAttribute="trailing" constant="-42" id="l1h-xZ-Tkh"/>
                                                     <constraint firstItem="4mH-Ru-gFM" firstAttribute="centerY" secondItem="nL4-LP-fCR" secondAttribute="centerY" id="uw1-yY-1UJ"/>
+                                                    <constraint firstItem="UwC-Vn-TCt" firstAttribute="leading" secondItem="hIh-lR-PKa" secondAttribute="trailing" constant="16" id="v4N-gg-zkY"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">

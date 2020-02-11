@@ -14,12 +14,25 @@ import UIKit
 class DeckBuilderController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var cardsAmount: UILabel!
     @IBOutlet weak var selectedFilters: UIView!
     @IBOutlet weak var labelFilter: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var titleView: TitleCellUIView!
-    @IBOutlet weak var buttonLabel: UILabel!
+    
+    @IBOutlet weak var cardsAmount: UILabel! {
+        didSet {
+            cardsAmount.font = UIFont.scaledFont(for: "OpenSans-SemiBold", size: 17)
+            cardsAmount.adjustsFontSizeToFitWidth = true
+        }
+    }
+
+    @IBOutlet weak var buttonLabel: UILabel! {
+        didSet {
+            buttonLabel.text = NSLocalizedString("Show My Deck", comment: "")
+            buttonLabel.font = UIFont.scaledFont(for: "OpenSans-SemiBold", size: 17)
+            buttonLabel.adjustsFontSizeToFitWidth = true
+        }
+    }
     
     var myServices: LORService = LORService()
     var gameCards: [Card]? = nil
@@ -33,8 +46,6 @@ class DeckBuilderController: UIViewController {
         titleView.titleLabel.text = NSLocalizedString("Choose Your Cards", comment: "")
         self.title = NSLocalizedString("Choose Cards", comment: "")
         
-        buttonLabel.text = NSLocalizedString("Show My Deck", comment: "")
-
         setUp()
     }
     

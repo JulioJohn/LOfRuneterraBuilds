@@ -18,7 +18,7 @@ class DeckViewController: UIViewController {
     var selectedDeckIndex: Int? = nil
     
     var decks: [Deck] = {
-        let d1 = Deck(author: "You", name: "Teste 1", factions: [.demacia, .freljord], playStyle: .midrange)
+        let d1 = Deck(author: "You", name: "Teste 1 WRKG UIGBIEUBGE", factions: [.freljord], playStyle: .midrange)
         
         let d2 = Deck(author: "You", name: "Teste 2", factions: [.demacia, .freljord], playStyle: .aggro)
         
