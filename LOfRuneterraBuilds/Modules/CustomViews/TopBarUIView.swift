@@ -8,9 +8,6 @@
 
 import UIKit
 
-protocol TopBarDelegate: class {
-    func goToCardSave()
-}
 
 class TopBarUIView: UIView {
     
@@ -20,7 +17,6 @@ class TopBarUIView: UIView {
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var title: UILabel!
     
-    weak var delegate: TopBarDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,7 +35,5 @@ class TopBarUIView: UIView {
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
 
-    @IBAction func goToCardSave(_ sender: Any) {
-        delegate?.goToCardSave()
-    }
+    
 }
