@@ -18,7 +18,8 @@ class DeckBuilderController: UIViewController {
     @IBOutlet weak var selectedFilters: UIView!
     @IBOutlet weak var labelFilter: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
-    
+    @IBOutlet weak var titleView: TitleCellUIView!
+    @IBOutlet weak var buttonLabel: UILabel!
     
     var myServices: LORService = LORService()
     var gameCards: [Card]? = nil
@@ -29,27 +30,29 @@ class DeckBuilderController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        titleView.titleLabel.text = NSLocalizedString("Choose Your Cards", comment: "")
+        self.title = NSLocalizedString("Choose Cards", comment: "")
+        
+        buttonLabel.text = NSLocalizedString("Show My Deck", comment: "")
+
         setUp()
     }
     
     
-    func setUp(){
+    func setUp() {
         setUpCollection()
         setUpJSON()
         setUpFilterPin()
         setUpSearchBar()
-        
     }
     
-    
-    func setUpCollection(){
+    func setUpCollection() {
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         self.searchBar.delegate = self
     }
     
-    
-    func setUpJSON(){
+    func setUpJSON() {
         myServices.championLoadJson(filename: "set1-en_us") { (cards, error) in
             if error != nil {
                 print(error)
@@ -64,7 +67,6 @@ class DeckBuilderController: UIViewController {
         }
     }
     
-    
     //TODO: Change the textfield.background color to the app background color
     func setUpSearchBar(){
         if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
@@ -73,18 +75,15 @@ class DeckBuilderController: UIViewController {
         }
     }
     
-    
     func setUpFilterPin(){
         makeCirle(view: self.selectedFilters)
         self.selectedFilters.isHidden = true
         self.labelFilter.isHidden = true
     }
     
-    
     @IBAction func cartButton(_ sender: UIButton) {
         //TODO: segue to CardEditing
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToCardDetails" {
@@ -95,7 +94,6 @@ class DeckBuilderController: UIViewController {
             }
         }
     }
-    
     
     func makeCirle(view: UIView){
         view.layer.cornerRadius = view.frame.size.width/2
