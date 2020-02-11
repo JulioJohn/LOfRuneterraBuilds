@@ -1,5 +1,5 @@
 //
-//  CustomCardUIView.swift
+//  CustomCardTableViewCell.swift
 //  LOfRuneterraBuilds
 //
 //  Created by Patricia Amado Ferreira de Mello on 10/02/20.
@@ -8,33 +8,45 @@
 
 import UIKit
 
-class CustomCardUIView: UIView {
-
-    @IBOutlet var contentView: UIView!
+class CustomCardTableViewCell: UITableViewCell {
+    
+    @IBOutlet var content: UIView!
     
     @IBOutlet weak var cardImage: UIImageView!
     @IBOutlet weak var cardName: UILabel!
     @IBOutlet weak var cardMana: UILabel!
     
-    @IBOutlet weak var cardAmount: UILabel!
+    @IBOutlet weak var cardsAmount: UILabel!
     
     var card: Card? = nil
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         commonInit()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
         commonInit()
     }
+    
     
     func commonInit(){
         Bundle.main.loadNibNamed("CustomCard", owner: self, options: nil)
-        addSubview(self.contentView)
-        self.contentView.frame = self.bounds
-        self.contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        addSubview(self.content)
+        self.content.frame = self.bounds
+        self.content.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
     
     func cardSetUp(){
@@ -50,5 +62,5 @@ class CustomCardUIView: UIView {
             self.cardMana.text = "\(cardMana)"
         }
     }
-    
+
 }
