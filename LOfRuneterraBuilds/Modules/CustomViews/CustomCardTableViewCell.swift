@@ -9,6 +9,16 @@
 import UIKit
 
 class CustomCardTableViewCell: UITableViewCell {
+    
+    @IBOutlet var content: UIView!
+    
+    @IBOutlet weak var cardImage: UIImageView!
+    @IBOutlet weak var cardName: UILabel!
+    @IBOutlet weak var cardMana: UILabel!
+    
+    @IBOutlet weak var cardsAmount: UILabel!
+    
+    var card: Card? = nil
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +29,38 @@ class CustomCardTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        commonInit()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        commonInit()
+    }
+    
+    
+    func commonInit(){
+        Bundle.main.loadNibNamed("CustomCard", owner: self, options: nil)
+        addSubview(self.content)
+        self.content.frame = self.bounds
+        self.content.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+    }
+    
+    func cardSetUp(){
+        if let cardImageName = self.card?.cardCode {
+            self.cardImage.image = UIImage(named: cardImageName)
+        }
+        
+        if let cardName = self.card?.name {
+            self.cardName.text = cardName
+        }
+        
+        if let cardMana = self.card?.cost {
+            self.cardMana.text = "\(cardMana)"
+        }
     }
 
 }

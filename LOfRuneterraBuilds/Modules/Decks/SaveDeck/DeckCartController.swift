@@ -11,4 +11,8 @@ import UIKit
 
 class DeckCartController: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
 }
