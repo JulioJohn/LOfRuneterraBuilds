@@ -13,9 +13,11 @@
 		3E5DE5F223EC442E00452C91 /* DeckBuilderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DE5F123EC442E00452C91 /* DeckBuilderController.swift */; };
 		3E5DE5F423EC457200452C91 /* DeckCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DE5F323EC457200452C91 /* DeckCollectionViewCell.swift */; };
 		3E76717623F1C70200973F36 /* CustomCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E76717523F1C70200973F36 /* CustomCard.xib */; };
-		3E76717823F1CAF700973F36 /* CustomCardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76717723F1CAF700973F36 /* CustomCardUIView.swift */; };
 		3E76717A23F1D89C00973F36 /* DeckCartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76717923F1D89C00973F36 /* DeckCartController.swift */; };
 		3E76717C23F1D8D500973F36 /* DeckCart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E76717B23F1D8D500973F36 /* DeckCart.storyboard */; };
+		3E76717E23F1F81300973F36 /* CustomCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76717D23F1F81300973F36 /* CustomCardTableViewCell.swift */; };
+		3E76718023F2D1B900973F36 /* TopBarUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76717F23F2D1B800973F36 /* TopBarUIView.swift */; };
+		3E76718223F2D1F000973F36 /* TopBarUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E76718123F2D1F000973F36 /* TopBarUIView.xib */; };
 		42052C6623E9939C009BDDF5 /* ExploreStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42052C6523E9939C009BDDF5 /* ExploreStoryboard.storyboard */; };
 		42052C6823E993D2009BDDF5 /* GalleryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42052C6723E993D2009BDDF5 /* GalleryStoryboard.storyboard */; };
 		42052C6A23E99493009BDDF5 /* DecksStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42052C6923E99493009BDDF5 /* DecksStoryboard.storyboard */; };
@@ -62,6 +64,10 @@
 		E7AE298923E09E9000EBD3A9 /* globals-en_us.json in Resources */ = {isa = PBXBuildFile; fileRef = E7AE298823E09E9000EBD3A9 /* globals-en_us.json */; };
 		E7AE298B23E09EED00EBD3A9 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE298A23E09EED00EBD3A9 /* Card.swift */; };
 		E7EE475123F1EAB700AB27C1 /* Pack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE475023F1EAB700AB27C1 /* Pack.swift */; };
+		E7EE475623F2004B00AB27C1 /* DeckDetailTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE475523F2004B00AB27C1 /* DeckDetailTagCollectionViewCell.swift */; };
+		E7EE475823F2D3F300AB27C1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE475723F2D3F300AB27C1 /* Colors.swift */; };
+		E7EE475A23F2DDC000AB27C1 /* DeckDetailTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE475923F2DDC000AB27C1 /* DeckDetailTitleTableViewCell.swift */; };
+		E7EE475C23F2E31000AB27C1 /* ShowDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE475B23F2E31000AB27C1 /* ShowDeck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,9 +77,11 @@
 		3E5DE5F123EC442E00452C91 /* DeckBuilderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckBuilderController.swift; sourceTree = "<group>"; };
 		3E5DE5F323EC457200452C91 /* DeckCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCollectionViewCell.swift; sourceTree = "<group>"; };
 		3E76717523F1C70200973F36 /* CustomCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCard.xib; sourceTree = "<group>"; };
-		3E76717723F1CAF700973F36 /* CustomCardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardUIView.swift; sourceTree = "<group>"; };
 		3E76717923F1D89C00973F36 /* DeckCartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCartController.swift; sourceTree = "<group>"; };
 		3E76717B23F1D8D500973F36 /* DeckCart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeckCart.storyboard; sourceTree = "<group>"; };
+		3E76717D23F1F81300973F36 /* CustomCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardTableViewCell.swift; sourceTree = "<group>"; };
+		3E76717F23F2D1B800973F36 /* TopBarUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarUIView.swift; sourceTree = "<group>"; };
+		3E76718123F2D1F000973F36 /* TopBarUIView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopBarUIView.xib; sourceTree = "<group>"; };
 		42052C6523E9939C009BDDF5 /* ExploreStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExploreStoryboard.storyboard; sourceTree = "<group>"; };
 		42052C6723E993D2009BDDF5 /* GalleryStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GalleryStoryboard.storyboard; sourceTree = "<group>"; };
 		42052C6923E99493009BDDF5 /* DecksStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DecksStoryboard.storyboard; sourceTree = "<group>"; };
@@ -124,6 +132,10 @@
 		E7AE298823E09E9000EBD3A9 /* globals-en_us.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "globals-en_us.json"; sourceTree = "<group>"; };
 		E7AE298A23E09EED00EBD3A9 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		E7EE475023F1EAB700AB27C1 /* Pack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pack.swift; sourceTree = "<group>"; };
+		E7EE475523F2004B00AB27C1 /* DeckDetailTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckDetailTagCollectionViewCell.swift; sourceTree = "<group>"; };
+		E7EE475723F2D3F300AB27C1 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		E7EE475923F2DDC000AB27C1 /* DeckDetailTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckDetailTitleTableViewCell.swift; sourceTree = "<group>"; };
+		E7EE475B23F2E31000AB27C1 /* ShowDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDeck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,8 +268,6 @@
 				3E5DE5F323EC457200452C91 /* DeckCollectionViewCell.swift */,
 				3E5DE5EB23EAF93900452C91 /* DeckBuilder.storyboard */,
 				3E5DE5F123EC442E00452C91 /* DeckBuilderController.swift */,
-				3E76717923F1D89C00973F36 /* DeckCartController.swift */,
-				3E76717B23F1D8D500973F36 /* DeckCart.storyboard */,
 			);
 			path = DeckBuilder;
 			sourceTree = "<group>";
@@ -280,7 +290,9 @@
 				E784252E23EDA8050026A28C /* TitleCell.xib */,
 				E784253023EDA8990026A28C /* TitleCellUIView.swift */,
 				3E76717523F1C70200973F36 /* CustomCard.xib */,
-				3E76717723F1CAF700973F36 /* CustomCardUIView.swift */,
+				3E76717D23F1F81300973F36 /* CustomCardTableViewCell.swift */,
+				3E76718123F2D1F000973F36 /* TopBarUIView.xib */,
+				3E76717F23F2D1B800973F36 /* TopBarUIView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -310,6 +322,8 @@
 			children = (
 				E784253B23F18B170026A28C /* SaveDeck.storyboard */,
 				E784253D23F18C720026A28C /* SaveDeckViewController.swift */,
+				3E76717923F1D89C00973F36 /* DeckCartController.swift */,
+				3E76717B23F1D8D500973F36 /* DeckCart.storyboard */,
 			);
 			path = SaveDeck;
 			sourceTree = "<group>";
@@ -319,6 +333,8 @@
 			children = (
 				E784254123F1D9EA0026A28C /* DeckDetail.storyboard */,
 				E784254323F1DA020026A28C /* DeckDetailViewController.swift */,
+				E7EE475523F2004B00AB27C1 /* DeckDetailTagCollectionViewCell.swift */,
+				E7EE475923F2DDC000AB27C1 /* DeckDetailTitleTableViewCell.swift */,
 			);
 			path = DeckDetails;
 			sourceTree = "<group>";
@@ -362,6 +378,7 @@
 			children = (
 				E7236AF423E0D193008A1178 /* ServerError.swift */,
 				42B66EAD23F1ED8B00985C5E /* UIFont+Extensions.swift */,
+				E7EE475723F2D3F300AB27C1 /* Colors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -376,6 +393,7 @@
 				E784251F23EAE41D0026A28C /* Filter.swift */,
 				E784252823EC40B70026A28C /* CardInfos.swift */,
 				E7EE475023F1EAB700AB27C1 /* Pack.swift */,
+				E7EE475B23F2E31000AB27C1 /* ShowDeck.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -493,6 +511,7 @@
 				3E76717C23F1D8D500973F36 /* DeckCart.storyboard in Resources */,
 				42052C6823E993D2009BDDF5 /* GalleryStoryboard.storyboard in Resources */,
 				E784254223F1D9EA0026A28C /* DeckDetail.storyboard in Resources */,
+				3E76718223F2D1F000973F36 /* TopBarUIView.xib in Resources */,
 				42052C6623E9939C009BDDF5 /* ExploreStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,8 +525,10 @@
 			files = (
 				E784253923F0A4E00026A28C /* FilterViewController.swift in Sources */,
 				42052C7423EAE8FD009BDDF5 /* Faction.swift in Sources */,
+				E7EE475A23F2DDC000AB27C1 /* DeckDetailTitleTableViewCell.swift in Sources */,
 				42052C7223EAE853009BDDF5 /* Deck.swift in Sources */,
 				42052C7623EAEF33009BDDF5 /* PlayStyle.swift in Sources */,
+				3E76717E23F1F81300973F36 /* CustomCardTableViewCell.swift in Sources */,
 				42052C6E23EAE831009BDDF5 /* DeckCell.swift in Sources */,
 				E7236AF123E0D132008A1178 /* LORService.swift in Sources */,
 				42B66EA523F1C09300985C5E /* ExploreViewController.swift in Sources */,
@@ -519,14 +540,17 @@
 				E7AE297223E0979100EBD3A9 /* ViewController.swift in Sources */,
 				E7236AF323E0D146008A1178 /* LORDAO.swift in Sources */,
 				3E5DE5F023EB0C2E00452C91 /* CardSelectController.swift in Sources */,
+				E7EE475C23F2E31000AB27C1 /* ShowDeck.swift in Sources */,
 				E784253123EDA8990026A28C /* TitleCellUIView.swift in Sources */,
 				3E76717A23F1D89C00973F36 /* DeckCartController.swift in Sources */,
-				3E76717823F1CAF700973F36 /* CustomCardUIView.swift in Sources */,
 				E7EE475123F1EAB700AB27C1 /* Pack.swift in Sources */,
 				E7AE296E23E0979100EBD3A9 /* AppDelegate.swift in Sources */,
+				3E76718023F2D1B900973F36 /* TopBarUIView.swift in Sources */,
 				3E5DE5F223EC442E00452C91 /* DeckBuilderController.swift in Sources */,
 				E7AE297023E0979100EBD3A9 /* SceneDelegate.swift in Sources */,
+				E7EE475823F2D3F300AB27C1 /* Colors.swift in Sources */,
 				E784252023EAE41D0026A28C /* Filter.swift in Sources */,
+				E7EE475623F2004B00AB27C1 /* DeckDetailTagCollectionViewCell.swift in Sources */,
 				E784252923EC40B70026A28C /* CardInfos.swift in Sources */,
 				E7AE298B23E09EED00EBD3A9 /* Card.swift in Sources */,
 				E784252723EB4E550026A28C /* CardDetailTableViewCell.swift in Sources */,
