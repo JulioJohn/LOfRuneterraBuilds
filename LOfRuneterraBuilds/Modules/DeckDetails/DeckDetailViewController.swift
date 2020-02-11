@@ -18,22 +18,29 @@ class DeckDetailViewController: UIViewController {
     
     var tags: [String] = ["Burst", "Fast", "Capture", "Barrier"]
     
-    var showDeck = ShowDeck(champions: nil, spells: nil, followers: nil)
+    var showDeck: ShowDeck? = nil
+    
+    //TODO: Delete this after doing the class
+    var gameCards: [Card]? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTableView()
         setupCollectionView()
+        //TODO: Delete this after doing the class
+        setUpJSON()
         
         if let deck = self.deck {
             titleUIView.titleLabel.text = deck.name
         }
+        
+        transformDeckInShowDeck()
     }
     
     func setupTableView() {
         self.cardsTableView.delegate = self
-        self.cardsTableView.delegate = self
+        self.cardsTableView.dataSource = self
     }
     
     func setupCollectionView() {
@@ -41,6 +48,79 @@ class DeckDetailViewController: UIViewController {
         self.tagCollectionView.dataSource = self
     }
 
+}
+
+//TODO: Delete this after doing the class
+extension DeckDetailViewController {
+    
+    func transformDeckInShowDeck() {
+        var champion: [Pack] = []
+        var spell: [Pack] = []
+        var unit: [Pack] = []
+        
+        if let deck = self.deck {
+            for pack in deck.cards {
+                if pack.card.type.contains("Champion") {
+                    champion.append(pack)
+                } else if pack.card.type.contains("Spell") {
+                    spell.append(pack)
+                } else if pack.card.type.contains("Unit") {
+                    unit.append(pack)
+                }
+            }
+        }
+        
+        self.showDeck = ShowDeck(champions: champion, spells: spell, followers: unit)
+    }
+    
+    func setUpJSON() {
+        let service = LORService()
+        
+        service.championLoadJson(filename: DataUtils.set.getFileName()) { (cards, error) in
+            if error != nil {
+                print(error)
+                return
+            }
+            self.gameCards = cards
+            
+            self.makeFakeDeck()
+            
+            //TODO: When remove the JSON capture from this class, put show deck in DidLoad
+            self.transformDeckInShowDeck()
+            
+            DispatchQueue.main.async {
+                self.cardsTableView.reloadData()
+            }
+        }
+    }
+    
+    func makeFakeDeck() {
+        let packs: [Pack] = [getPacksOfCards(cardName: "Anivia", quantity: 2),
+        getPacksOfCards(cardName: "Vile Feast", quantity: 1),
+        getPacksOfCards(cardName: "Vengeance", quantity: 3),
+        getPacksOfCards(cardName: "She Who Wanders", quantity: 2)]
+        
+        let deck = Deck(author: "Julio John", cards: packs, name: "DeckDoCabrito", factions: [.shadowIsles,.freljord], playStyle: .control, description: "")
+        self.deck = deck
+        print(deck)
+        
+    }
+    
+    func getPacksOfCards(cardName: String, quantity: Int) -> Pack {
+        let card = getCardsFromDeck(cardName: cardName)
+        let pack = Pack(card: card!, quantity: quantity)
+        return pack
+    }
+    
+    func getCardsFromDeck(cardName: String) -> Card? {
+        for card in gameCards! {
+            if card.name.contains(cardName) {
+                print(card.name)
+                return card
+            }
+        }
+        return nil
+    }
 }
 
 extension DeckDetailViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -55,8 +135,6 @@ extension DeckDetailViewController: UICollectionViewDataSource, UICollectionView
         return 0
     }
     
-    
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cardTagCell", for: indexPath) as? DeckDetailTagCollectionViewCell
         
@@ -70,17 +148,58 @@ extension DeckDetailViewController: UICollectionViewDataSource, UICollectionView
 }
 
 extension DeckDetailViewController: UITableViewDataSource, UITableViewDelegate {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        //One for each title (Monster, Spell, Unit)
+        return 3
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let deck = self.deck {
-            return deck.cards.count
+        if let deck = self.deck, let showDeck = self.showDeck {
+            //Add 1 because title is a row, not a section
+            if section == 0 {
+                return showDeck.champions.count + 1
+            } else if section == 1 {
+                return showDeck.spells.count + 1
+            } else {
+                return showDeck.followers.count + 1
+            }
         }
-        return 0
+        //Has 3 titles in the worst case
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.cardsTableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath)
         
-        return cell
+        //If is the first row of each section, places the Title Cell
+        let titleCell = self.cardsTableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath) as? DeckDetailTitleTableViewCell
+        if indexPath.row == 0, let titleCell = titleCell {
+            if indexPath.section == 0 {
+                titleCell.titleCell.text = "Champion"
+            } else if indexPath.section == 1 {
+                titleCell.titleCell.text = "Spell"
+            } else {
+                titleCell.titleCell.text = "Follower"
+            }
+            return titleCell
+        }
+        
+        //For other rows, place Card cells
+        let cell = self.cardsTableView.dequeueReusableCell(withIdentifier: "cardCell", for: indexPath) as? CustomCardTableViewCell
+        
+        if let cell = cell, let deck = self.deck {
+            let card = deck.cards[indexPath.row].card
+            let pack = deck.cards[indexPath.row]
+            
+            //Fill infos
+            cell.cardName.text = card.name
+            cell.cardMana.text = "\(card.cost)"
+            cell.cardsAmount.text = "\(pack.quantity)"
+            cell.cardImage.backgroundColor = .black
+            
+            return cell
+        }
+        
+        return UITableViewCell()
     }
     
     

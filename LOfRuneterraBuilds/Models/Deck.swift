@@ -10,7 +10,7 @@ import Foundation
 
 struct Deck {
     var author: String?
-    var cards: [Card] = []
+    var cards: [Pack] = []
     var name: String
     var factions: [Faction]
     var playStyle: PlayStyle
