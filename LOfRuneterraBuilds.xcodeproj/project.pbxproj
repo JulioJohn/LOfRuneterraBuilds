@@ -27,6 +27,7 @@
 		42052C7423EAE8FD009BDDF5 /* Faction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42052C7323EAE8FD009BDDF5 /* Faction.swift */; };
 		42052C7623EAEF33009BDDF5 /* PlayStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42052C7523EAEF33009BDDF5 /* PlayStyle.swift */; };
 		42052C7823EAFFDA009BDDF5 /* DecksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42052C7723EAFFDA009BDDF5 /* DecksViewController.swift */; };
+		42191FFE23F309980007297C /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42191FFD23F309970007297C /* GalleryViewController.swift */; };
 		421BF77E23F1FF2B00FD802E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 421BF78023F1FF2B00FD802E /* Localizable.strings */; };
 		421BF78723F2D5FB00FD802E /* set1-es_es.json in Resources */ = {isa = PBXBuildFile; fileRef = 421BF78523F2D5FA00FD802E /* set1-es_es.json */; };
 		421BF78823F2D5FB00FD802E /* globals-es_es.json in Resources */ = {isa = PBXBuildFile; fileRef = 421BF78623F2D5FB00FD802E /* globals-es_es.json */; };
@@ -91,6 +92,7 @@
 		42052C7323EAE8FD009BDDF5 /* Faction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faction.swift; sourceTree = "<group>"; };
 		42052C7523EAEF33009BDDF5 /* PlayStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayStyle.swift; sourceTree = "<group>"; };
 		42052C7723EAFFDA009BDDF5 /* DecksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecksViewController.swift; sourceTree = "<group>"; };
+		42191FFD23F309970007297C /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		421BF77F23F1FF2B00FD802E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		421BF78123F1FF4500FD802E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		421BF78523F2D5FA00FD802E /* set1-es_es.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "set1-es_es.json"; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				42052C6723E993D2009BDDF5 /* GalleryStoryboard.storyboard */,
+				42191FFD23F309970007297C /* GalleryViewController.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -545,6 +548,7 @@
 				3E76717A23F1D89C00973F36 /* DeckCartController.swift in Sources */,
 				E7EE475123F1EAB700AB27C1 /* Pack.swift in Sources */,
 				E7AE296E23E0979100EBD3A9 /* AppDelegate.swift in Sources */,
+				42191FFE23F309980007297C /* GalleryViewController.swift in Sources */,
 				3E76718023F2D1B900973F36 /* TopBarUIView.swift in Sources */,
 				3E5DE5F223EC442E00452C91 /* DeckBuilderController.swift in Sources */,
 				E7AE297023E0979100EBD3A9 /* SceneDelegate.swift in Sources */,

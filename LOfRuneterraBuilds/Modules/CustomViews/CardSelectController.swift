@@ -70,4 +70,10 @@ class CardSelectController: UIView {
     @IBAction func goToCardDetail(_ sender: UIButton) {
         delegate?.goToCardDetails(for: card!)
     }
+    
+    func hideCardAmountButtons() {
+        cardsAmount.isHidden = true
+        increaseButton.isHidden = true
+        decreaseButton.isHidden = true
+    }
 }

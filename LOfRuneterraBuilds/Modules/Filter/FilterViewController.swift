@@ -12,9 +12,7 @@ class FilterViewController: UIViewController {
 
     @IBOutlet weak var manaView: TitleCellUIView!
     @IBOutlet weak var regionView: TitleCellUIView!
-    @IBOutlet weak var typeView: TitleCellUIView!
     @IBOutlet weak var rarityView: TitleCellUIView!
-    
     
     @IBOutlet weak var mana1: UIButton!
     @IBOutlet weak var mana2: UIButton!
@@ -30,6 +28,8 @@ class FilterViewController: UIViewController {
     @IBOutlet weak var noxusButton: UIButton!
     @IBOutlet weak var shadowButton: UIButton!
     
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBOutlet weak var titleItem: UINavigationItem!
     
     var mana: Int? = nil
     var region: String? = nil
@@ -45,13 +45,41 @@ class FilterViewController: UIViewController {
         super.viewDidLoad()
         changeFont(view: manaView, fontSize: 17.0)
         changeFont(view: regionView, fontSize: 17.0)
-        changeFont(view: typeView, fontSize: 17.0)
         changeFont(view: rarityView, fontSize: 17.0)
         
         manaView.titleLabel.text = "Mana"
         regionView.titleLabel.text = "Region"
-        typeView.titleLabel.text = "Type"
         rarityView.titleLabel.text = "Rarity"
+        
+        setNavigationBar()
+    }
+    
+    func setNavigationBar() {
+        titleItem.title = NSLocalizedString("Filter", comment: "")
+
+        let accentColor = UIColor(red: 189/255, green: 148/255, blue: 91/255, alpha: 1.0)
+        
+        let leftItem = UIBarButtonItem()
+        leftItem.title = NSLocalizedString("Cancel", comment: "")
+        leftItem.tintColor = accentColor
+        leftItem.action = #selector(dismissScreen)
+        
+        titleItem.leftBarButtonItem = leftItem
+        
+        let rightItem = UIBarButtonItem()
+        rightItem.title = NSLocalizedString("See Results", comment: "")
+        rightItem.tintColor = accentColor
+        rightItem.action = #selector(didTapFilterInNavBar)
+        
+        titleItem.rightBarButtonItem = rightItem
+    }
+    
+    @objc func dismissScreen() {
+        self.dismiss(animated: true)
+    }
+    
+    @objc func didTapFilterInNavBar() {
+        self.dismiss(animated: true)
     }
     
     func changeFont(view: TitleCellUIView, fontSize: CGFloat) {
