@@ -28,8 +28,6 @@ class DeckDetailViewController: UIViewController {
         
         setupTableView()
         setupCollectionView()
-        //TODO: Delete this after doing the class
-        setUpJSON()
         
         if let deck = self.deck {
             titleUIView.titleLabel.text = deck.name
@@ -60,66 +58,19 @@ extension DeckDetailViewController {
         
         if let deck = self.deck {
             for pack in deck.cards {
-                if pack.card.type.contains("Champion") {
-                    champion.append(pack)
-                } else if pack.card.type.contains("Spell") {
+                if pack.card.type.contains("Spell") {
                     spell.append(pack)
                 } else if pack.card.type.contains("Unit") {
-                    unit.append(pack)
+                    if pack.card.subtype.contains("Champion") {
+                        champion.append(pack)
+                    } else {
+                        unit.append(pack)
+                    }
                 }
             }
         }
         
         self.showDeck = ShowDeck(champions: champion, spells: spell, followers: unit)
-    }
-    
-    func setUpJSON() {
-        let service = LORService()
-        
-        service.championLoadJson(filename: DataUtils.set.getFileName()) { (cards, error) in
-            if error != nil {
-                print(error)
-                return
-            }
-            self.gameCards = cards
-            
-            self.makeFakeDeck()
-            
-            //TODO: When remove the JSON capture from this class, put show deck in DidLoad
-            self.transformDeckInShowDeck()
-            
-            DispatchQueue.main.async {
-                self.cardsTableView.reloadData()
-            }
-        }
-    }
-    
-    func makeFakeDeck() {
-        let packs: [Pack] = [getPacksOfCards(cardName: "Anivia", quantity: 2),
-        getPacksOfCards(cardName: "Vile Feast", quantity: 1),
-        getPacksOfCards(cardName: "Vengeance", quantity: 3),
-        getPacksOfCards(cardName: "She Who Wanders", quantity: 2)]
-        
-        let deck = Deck(author: "Julio John", cards: packs, name: "DeckDoCabrito", factions: [.shadowIsles,.freljord], playStyle: .control, description: "")
-        self.deck = deck
-        print(deck)
-        
-    }
-    
-    func getPacksOfCards(cardName: String, quantity: Int) -> Pack {
-        let card = getCardsFromDeck(cardName: cardName)
-        let pack = Pack(card: card!, quantity: quantity)
-        return pack
-    }
-    
-    func getCardsFromDeck(cardName: String) -> Card? {
-        for card in gameCards! {
-            if card.name.contains(cardName) {
-                print(card.name)
-                return card
-            }
-        }
-        return nil
     }
 }
 
