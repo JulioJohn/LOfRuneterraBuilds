@@ -40,6 +40,7 @@
 		E7236AF123E0D132008A1178 /* LORService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7236AF023E0D132008A1178 /* LORService.swift */; };
 		E7236AF323E0D146008A1178 /* LORDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7236AF223E0D146008A1178 /* LORDAO.swift */; };
 		E7236AF523E0D193008A1178 /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7236AF423E0D193008A1178 /* ServerError.swift */; };
+		E747624E23F335E900351EE6 /* MockDecks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747624D23F335E900351EE6 /* MockDecks.swift */; };
 		E784251D23E861B50026A28C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E784251C23E861B50026A28C /* CloudKit.framework */; };
 		E784252023EAE41D0026A28C /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784251F23EAE41D0026A28C /* Filter.swift */; };
 		E784252323EAFD800026A28C /* CardDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E784252223EAFD800026A28C /* CardDetails.storyboard */; };
@@ -106,6 +107,7 @@
 		E7236AF023E0D132008A1178 /* LORService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LORService.swift; sourceTree = "<group>"; };
 		E7236AF223E0D146008A1178 /* LORDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LORDAO.swift; sourceTree = "<group>"; };
 		E7236AF423E0D193008A1178 /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
+		E747624D23F335E900351EE6 /* MockDecks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDecks.swift; sourceTree = "<group>"; };
 		E784251A23E861B00026A28C /* LOfRuneterraBuilds.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LOfRuneterraBuilds.entitlements; sourceTree = "<group>"; };
 		E784251C23E861B50026A28C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		E784251F23EAE41D0026A28C /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
@@ -397,6 +399,7 @@
 				E784252823EC40B70026A28C /* CardInfos.swift */,
 				E7EE475023F1EAB700AB27C1 /* Pack.swift */,
 				E7EE475B23F2E31000AB27C1 /* ShowDeck.swift */,
+				E747624D23F335E900351EE6 /* MockDecks.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				E7236AF323E0D146008A1178 /* LORDAO.swift in Sources */,
 				3E5DE5F023EB0C2E00452C91 /* CardSelectController.swift in Sources */,
 				E7EE475C23F2E31000AB27C1 /* ShowDeck.swift in Sources */,
+				E747624E23F335E900351EE6 /* MockDecks.swift in Sources */,
 				E784253123EDA8990026A28C /* TitleCellUIView.swift in Sources */,
 				3E76717A23F1D89C00973F36 /* DeckCartController.swift in Sources */,
 				E7EE475123F1EAB700AB27C1 /* Pack.swift in Sources */,
