@@ -24,7 +24,7 @@ class DeckCartController: UIViewController {
         self.setupTableView()
         self.setTopBar()
         
-//        self.customTopBar.rightButton.add
+        self.customTopBar.rightButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(send)))
     }
     
     
