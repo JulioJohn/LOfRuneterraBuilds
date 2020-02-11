@@ -10,12 +10,29 @@ import Foundation
 import UIKit
 
 enum Faction: String {
-    case demacia = "DE"
-    case freljord = "FR"
-    case ionia = "IO"
-    case noxus = "NX"
-    case piltoverAndZaun = "PZ"
-    case shadowIsles = "SI"
+    case demacia = "Demacia"
+    case freljord = "Freljord"
+    case ionia = "Ionia"
+    case noxus = "Noxus"
+    case piltoverAndZaun = "PiltoverZaun"
+    case shadowIsles = "ShadowIsles"
+    
+    func code() -> String {
+        switch self {
+        case .demacia:
+            return "DE"
+        case .freljord:
+            return "FR"
+        case .ionia:
+            return "IO"
+        case .noxus:
+            return "NX"
+        case .piltoverAndZaun:
+            return "PZ"
+        case .shadowIsles:
+            return "SI"
+        }
+    }
     
     func getImage() -> UIImage? {
         switch self {

@@ -112,7 +112,7 @@ class CardDetailsViewController: UIViewController {
     }
     
     func setupTableViewData() {
-        if var card = card {
+        if let card = card, let faction = Faction(rawValue: card.regionRef) {
             let nameText = card.name
             let regionText = card.region
             let monsterTypeText = card.type
@@ -131,13 +131,7 @@ class CardDetailsViewController: UIViewController {
             self.attackLabel.text = "\(attackText)"
             self.defenseLabel.text = "\(defenseText)"
             
-            self.regionImage.image = UIImage(named: regionText)
-            makeImageRound(image: self.regionImage)
-            self.monsterImage.image = UIImage(named: monsterTypeText)
-            makeImageRound(image: self.monsterImage)
-            self.rarityImage.image = UIImage(named: rarityText)
-            makeImageRound(image: self.rarityImage)
-            
+            self.regionImage.image = faction.getImage()
             cardSelectImage.changeCard(card: card)
         }
     }

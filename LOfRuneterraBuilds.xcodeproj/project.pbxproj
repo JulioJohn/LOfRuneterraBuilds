@@ -112,7 +112,7 @@
 		E784253D23F18C720026A28C /* SaveDeckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDeckViewController.swift; sourceTree = "<group>"; };
 		E784254123F1D9EA0026A28C /* DeckDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeckDetail.storyboard; sourceTree = "<group>"; };
 		E784254323F1DA020026A28C /* DeckDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckDetailViewController.swift; sourceTree = "<group>"; };
-		E7AE296A23E0979100EBD3A9 /* LOfRuneterraBuilds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOfRuneterraBuilds.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7AE296A23E0979100EBD3A9 /* Dexus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dexus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7AE296D23E0979100EBD3A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7AE296F23E0979100EBD3A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E7AE297123E0979100EBD3A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -335,7 +335,7 @@
 		E7AE296B23E0979100EBD3A9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E7AE296A23E0979100EBD3A9 /* LOfRuneterraBuilds.app */,
+				E7AE296A23E0979100EBD3A9 /* Dexus.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -427,7 +427,7 @@
 			);
 			name = LOfRuneterraBuilds;
 			productName = LOfRuneterraBuilds;
-			productReference = E7AE296A23E0979100EBD3A9 /* LOfRuneterraBuilds.app */;
+			productReference = E7AE296A23E0979100EBD3A9 /* Dexus.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -696,7 +696,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = juliojohn.LOfRuneterraBuilds;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Dexus;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -715,7 +715,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = juliojohn.LOfRuneterraBuilds;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Dexus;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
