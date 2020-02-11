@@ -15,24 +15,53 @@ class CardDetailsViewController: UIViewController {
     @IBOutlet weak var titleCell: TitleCellUIView!
     @IBOutlet weak var cardSelectImage: CardSelectController!
     
-    @IBOutlet weak var regionLabel: UILabel!
+    @IBOutlet weak var regionLabel: UILabel! {
+        didSet {
+            regionLabel.font = UIFont.scaledFont(for: "OpenSans-Regular", size: 11)
+        }
+    }
     @IBOutlet weak var regionImage: UIImageView!
     
-    @IBOutlet weak var monsterTypeLabel: UILabel!
+    @IBOutlet weak var monsterTypeLabel: UILabel! {
+        didSet {
+            monsterTypeLabel.font = UIFont.scaledFont(for: "OpenSans-Regular", size: 11)
+        }
+    }
     @IBOutlet weak var monsterImage: UIImageView!
     
-    @IBOutlet weak var rarityLabel: UILabel!
+    @IBOutlet weak var rarityLabel: UILabel! {
+        didSet {
+            rarityLabel.font = UIFont.scaledFont(for: "OpenSans-Regular", size: 11)
+        }
+    }
     @IBOutlet weak var rarityImage: UIImageView!
     
     @IBOutlet weak var cardsInfoTableView: UITableView!
     
-    @IBOutlet weak var cardEffectLabel: UILabel!
-    @IBOutlet weak var cardSpeakLabel: UILabel!
+    @IBOutlet weak var cardEffectLabel: UILabel! {
+        didSet {
+            attackLabel.font = UIFont.scaledFont(for: "OpenSans-Bold", size: 15)
+        }
+    }
+    
+    @IBOutlet weak var cardSpeakLabel: UILabel! {
+        didSet {
+            cardSpeakLabel.font = UIFont.scaledFont(for: "OpenSans-Regular", size: 15)
+        }
+    }
     
     @IBOutlet weak var tableHeigthConstrain: NSLayoutConstraint!
     
-    @IBOutlet weak var attackLabel: UILabel!
-    @IBOutlet weak var defenseLabel: UILabel!
+    @IBOutlet weak var attackLabel: UILabel! {
+        didSet {
+            attackLabel.font = UIFont.scaledFont(for: "OpenSans-SemiBold", size: 17)
+        }
+    }
+    @IBOutlet weak var defenseLabel: UILabel! {
+        didSet {
+            defenseLabel.font = UIFont.scaledFont(for: "OpenSans-SemiBold", size: 17)
+        }
+    }
     
     var card: Card? = nil
     var cardInfos: CardInfo? = nil
@@ -121,7 +150,7 @@ class CardDetailsViewController: UIViewController {
         label.font = UIFont.preferredFont(forTextStyle: .body)
         label.adjustsFontForContentSizeCategory = true
     }
-
+    
 }
 
 extension CardDetailsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -154,12 +183,12 @@ extension CardDetailsViewController: UITableViewDelegate, UITableViewDataSource 
             let habilityText = card.keywordRefs[indexPath.row]
             //Se tiver descricao carregada
             let effectDescription = cardInfos.searchForHabilityDescription(hability: habilityText)
-        
-            cell.habilityText.text = habilityText + "- " + effectDescription
+            
+            cell.habilityText.text = habilityText + " - " + effectDescription
             
             return cell
         }
-
+        
         return UITableViewCell()
     }
 }

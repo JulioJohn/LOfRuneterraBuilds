@@ -11,7 +11,11 @@ import UIKit
 class CardDetailTableViewCell: UITableViewCell {
 
     @IBOutlet weak var habilityImage: UIImageView!
-    @IBOutlet weak var habilityText: UILabel!
+    @IBOutlet weak var habilityText: UILabel! {
+        didSet {
+            habilityText.font = UIFont.scaledFont(for: "OpenSans-Regular", size: 15)
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,7 +23,6 @@ class CardDetailTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
 
 }
