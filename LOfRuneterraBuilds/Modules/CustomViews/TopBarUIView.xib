@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TopBarUIView" customModule="LOfRuneterraBuilds" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TopBarUIView" customModule="Dexus" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="cK6-Gf-Krf"/>
                 <outlet property="leftButton" destination="OLU-8q-fzg" id="umt-hO-nG6"/>
@@ -42,6 +42,9 @@
                             <state key="normal" title="Share Deck">
                                 <color key="titleColor" red="0.74117647060000003" green="0.58039215690000001" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </state>
+                            <connections>
+                                <action selector="goToCardSave:" destination="-1" eventType="touchUpInside" id="0Se-1A-ST8"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
