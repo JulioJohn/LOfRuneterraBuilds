@@ -37,6 +37,11 @@ class DeckCell: UITableViewCell {
         playStyleLabel.text = deck.playStyle.rawValue
         nameLabel.text = deck.name
         
+        setupUserLabel(for: deck)
+        setupFactionImages(for: deck)
+    }
+    
+    func setupUserLabel(for deck: Deck) {
         if let author = deck.author {
             let authorText = String(format: NSLocalizedString("by User", comment: ""), "\(author)")
             
@@ -49,7 +54,9 @@ class DeckCell: UITableViewCell {
         } else {
             userLabel.isHidden = true
         }
-        
+    }
+    
+    func setupFactionImages(for deck: Deck) {
         if deck.factions.count == 1 {
             guard let image = deck.factions[0].getImage() else { return }
             secondFaction.isHidden = true
