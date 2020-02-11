@@ -9,11 +9,11 @@
 import Foundation
 
 class ShowDeck {
-    var champions: [Pack]? = []
-    var spells: [Pack]? = []
-    var followers: [Pack]? = []
+    var champions: [Pack] = []
+    var spells: [Pack] = []
+    var followers: [Pack] = []
     
-    init(champions: [Pack]?, spells: [Pack]?, followers: [Pack]?) {
+    init(champions: [Pack], spells: [Pack], followers: [Pack]) {
         self.champions = champions
         self.spells = spells
         self.followers = followers
