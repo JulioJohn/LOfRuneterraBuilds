@@ -166,13 +166,14 @@ extension DeckBuilderController: CardSelectDelegate {
 extension DeckBuilderController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredCards = self.gameCards
+
         if searchText.isEmpty == false {
-            self.filteredCards = self.gameCards
-            
-            self.filteredCards = Filter(name: searchText, regions: nil, cost: nil).filterForName(allCards: gameCards!)
-            
-            self.collectionView.reloadData()
+            let filter = Filter(name: searchText, regions: nil, cost: nil)
+            filteredCards = filter.filterForName(allCards: gameCards!)
         }
+        
+        collectionView.reloadData()
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
