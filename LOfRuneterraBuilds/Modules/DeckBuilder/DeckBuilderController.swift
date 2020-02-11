@@ -62,6 +62,7 @@ class DeckBuilderController: UIViewController {
         setUpJSON()
         setUpFilterPin()
         setUpSearchBar()
+        setupToHideKeyboardOnTapOnView()
     }
     
     func setUpCollection() {
@@ -116,6 +117,19 @@ class DeckBuilderController: UIViewController {
     func makeCirle(view: UIView){
         view.layer.cornerRadius = view.frame.size.width/2
         view.clipsToBounds = true
+    }
+    
+    func setupToHideKeyboardOnTapOnView() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(dismissKeyboard))
+        
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
 
