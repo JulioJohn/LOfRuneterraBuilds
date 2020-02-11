@@ -64,7 +64,7 @@ class DeckBuilderController: UIViewController {
     }
     
     func setUpJSON() {
-        myServices.championLoadJson(filename: "set1-en_us") { (cards, error) in
+        myServices.championLoadJson(filename: DataUtils.set.getFileName()) { (cards, error) in
             if error != nil {
                 print(error)
                 return

@@ -54,7 +54,7 @@ class CardDetailsViewController: UIViewController {
     }
     
     func consumeJsonCardInfos() {
-        self.lorService.infosLoadJson(filename: "globals-en_us") { (cardInfos, error) in
+        self.lorService.infosLoadJson(filename: DataUtils.globals.getFileName()) { (cardInfos, error) in
             if error != nil {
                 print(error)
                 return

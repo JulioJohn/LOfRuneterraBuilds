@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         
         self.cardsSearchBar.delegate = self
         
-        myServices.championLoadJson(filename: "set1-en_us") { (cards, error) in
+        myServices.championLoadJson(filename: DataUtils.set.getFileName()) { (cards, error) in
             if error != nil { print(error) }
             else {
                 self.allGameCards = cards

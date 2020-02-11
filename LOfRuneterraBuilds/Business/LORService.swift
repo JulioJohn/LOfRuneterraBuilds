@@ -23,6 +23,4 @@ class LORService {
             completion(cards, error)
         }
     }
-    
-    
 }

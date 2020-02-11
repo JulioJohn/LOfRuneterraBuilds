@@ -26,6 +26,9 @@
 		42052C7623EAEF33009BDDF5 /* PlayStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42052C7523EAEF33009BDDF5 /* PlayStyle.swift */; };
 		42052C7823EAFFDA009BDDF5 /* DecksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42052C7723EAFFDA009BDDF5 /* DecksViewController.swift */; };
 		421BF77E23F1FF2B00FD802E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 421BF78023F1FF2B00FD802E /* Localizable.strings */; };
+		421BF78723F2D5FB00FD802E /* set1-es_es.json in Resources */ = {isa = PBXBuildFile; fileRef = 421BF78523F2D5FA00FD802E /* set1-es_es.json */; };
+		421BF78823F2D5FB00FD802E /* globals-es_es.json in Resources */ = {isa = PBXBuildFile; fileRef = 421BF78623F2D5FB00FD802E /* globals-es_es.json */; };
+		421BF78B23F2D78A00FD802E /* DataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421BF78A23F2D78A00FD802E /* DataUtils.swift */; };
 		42B66EA523F1C09300985C5E /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B66EA423F1C09300985C5E /* ExploreViewController.swift */; };
 		42B66EA823F1CC2E00985C5E /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42B66EA623F1CC2900985C5E /* OpenSans-Bold.ttf */; };
 		42B66EA923F1CC3200985C5E /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42B66EA723F1CC2900985C5E /* OpenSans-Regular.ttf */; };
@@ -82,6 +85,9 @@
 		42052C7723EAFFDA009BDDF5 /* DecksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecksViewController.swift; sourceTree = "<group>"; };
 		421BF77F23F1FF2B00FD802E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		421BF78123F1FF4500FD802E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		421BF78523F2D5FA00FD802E /* set1-es_es.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "set1-es_es.json"; sourceTree = "<group>"; };
+		421BF78623F2D5FB00FD802E /* globals-es_es.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "globals-es_es.json"; sourceTree = "<group>"; };
+		421BF78A23F2D78A00FD802E /* DataUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUtils.swift; sourceTree = "<group>"; };
 		42B66EA423F1C09300985C5E /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		42B66EA623F1CC2900985C5E /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		42B66EA723F1CC2900985C5E /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -190,6 +196,41 @@
 				42052C6F23EAE83D009BDDF5 /* DeckCell.xib */,
 			);
 			path = DeckCell;
+			sourceTree = "<group>";
+		};
+		421BF78223F2D59800FD802E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				421BF78423F2D5E400FD802E /* es_es */,
+				421BF78323F2D5DB00FD802E /* en_us */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		421BF78323F2D5DB00FD802E /* en_us */ = {
+			isa = PBXGroup;
+			children = (
+				E7AE298823E09E9000EBD3A9 /* globals-en_us.json */,
+				E7AE298623E09E6600EBD3A9 /* set1-en_us.json */,
+			);
+			path = en_us;
+			sourceTree = "<group>";
+		};
+		421BF78423F2D5E400FD802E /* es_es */ = {
+			isa = PBXGroup;
+			children = (
+				421BF78623F2D5FB00FD802E /* globals-es_es.json */,
+				421BF78523F2D5FA00FD802E /* set1-es_es.json */,
+			);
+			path = es_es;
+			sourceTree = "<group>";
+		};
+		421BF78923F2D77C00FD802E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				421BF78A23F2D78A00FD802E /* DataUtils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		E7236AEF23E0D117008A1178 /* Business */ = {
@@ -302,6 +343,7 @@
 		E7AE296C23E0979100EBD3A9 /* LOfRuneterraBuilds */ = {
 			isa = PBXGroup;
 			children = (
+				421BF78923F2D77C00FD802E /* Utils */,
 				42052C6123E99288009BDDF5 /* Modules */,
 				E784251A23E861B00026A28C /* LOfRuneterraBuilds.entitlements */,
 				E7236AEF23E0D117008A1178 /* Business */,
@@ -341,9 +383,8 @@
 		E7AE298323E09B1B00EBD3A9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				421BF78223F2D59800FD802E /* Data */,
 				E784253423EDAEDE0026A28C /* fonts */,
-				E7AE298823E09E9000EBD3A9 /* globals-en_us.json */,
-				E7AE298623E09E6600EBD3A9 /* set1-en_us.json */,
 				E7AE296F23E0979100EBD3A9 /* SceneDelegate.swift */,
 				E7AE296D23E0979100EBD3A9 /* AppDelegate.swift */,
 				E7AE297623E0979600EBD3A9 /* Assets.xcassets */,
@@ -444,8 +485,10 @@
 				42B66EAB23F1CC5300985C5E /* OpenSans-SemiBold.ttf in Resources */,
 				3E5DE5EC23EAF93900452C91 /* DeckBuilder.storyboard in Resources */,
 				E7AE298723E09E6600EBD3A9 /* set1-en_us.json in Resources */,
+				421BF78723F2D5FB00FD802E /* set1-es_es.json in Resources */,
 				E784252F23EDA8050026A28C /* TitleCell.xib in Resources */,
 				42052C7023EAE83D009BDDF5 /* DeckCell.xib in Resources */,
+				421BF78823F2D5FB00FD802E /* globals-es_es.json in Resources */,
 				42B66EA923F1CC3200985C5E /* OpenSans-Regular.ttf in Resources */,
 				3E76717C23F1D8D500973F36 /* DeckCart.storyboard in Resources */,
 				42052C6823E993D2009BDDF5 /* GalleryStoryboard.storyboard in Resources */,
@@ -470,6 +513,7 @@
 				42B66EA523F1C09300985C5E /* ExploreViewController.swift in Sources */,
 				42052C7823EAFFDA009BDDF5 /* DecksViewController.swift in Sources */,
 				E784252523EB39440026A28C /* CardDetailsViewController.swift in Sources */,
+				421BF78B23F2D78A00FD802E /* DataUtils.swift in Sources */,
 				42B66EAE23F1ED8B00985C5E /* UIFont+Extensions.swift in Sources */,
 				3E5DE5F423EC457200452C91 /* DeckCollectionViewCell.swift in Sources */,
 				E7AE297223E0979100EBD3A9 /* ViewController.swift in Sources */,
