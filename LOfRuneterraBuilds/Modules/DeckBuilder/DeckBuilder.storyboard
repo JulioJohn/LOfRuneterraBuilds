@@ -178,7 +178,7 @@
                                                 </constraints>
                                                 <state key="normal" image="Symbol"/>
                                                 <connections>
-                                                    <segue destination="qjF-0o-UIX" kind="presentation" modalPresentationStyle="fullScreen" id="aKd-Z8-OL4"/>
+                                                    <segue destination="qjF-0o-UIX" kind="presentation" id="aKd-Z8-OL4"/>
                                                 </connections>
                                             </button>
                                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WXd-hN-tpy">

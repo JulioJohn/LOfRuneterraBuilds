@@ -1,51 +1,37 @@
 //
-//  DeckBuilderController.swift
+//  GalleryViewController.swift
 //  LOfRuneterraBuilds
 //
-//  Created by Patricia Amado Ferreira de Mello on 06/02/20.
+//  Created by Guilherme Tavares Shimamoto on 11/02/20.
 //  Copyright © 2020 Júlio John Tavares Ramos. All rights reserved.
 //
-
-//para fazer markup do codigo usar "option + command + /"
 
 import Foundation
 import UIKit
 
-class DeckBuilderController: UIViewController {
+class GalleryViewController: UIViewController {
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var selectedFilters: UIView!
-    @IBOutlet weak var labelFilter: UILabel!
-    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var titleView: TitleCellUIView!
     
-    @IBOutlet weak var cardsAmount: UILabel! {
-        didSet {
-            cardsAmount.font = UIFont.scaledFont(for: "OpenSans-SemiBold", size: 17)
-            cardsAmount.adjustsFontSizeToFitWidth = true
-        }
-    }
-
-    @IBOutlet weak var buttonLabel: UILabel! {
-        didSet {
-            buttonLabel.text = NSLocalizedString("Show My Deck", comment: "")
-            buttonLabel.font = UIFont.scaledFont(for: "OpenSans-SemiBold", size: 17)
-            buttonLabel.adjustsFontSizeToFitWidth = true
-        }
-    }
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var selectedFiltersView: UIView!
+    
+    @IBOutlet weak var filterCountLabel: UILabel!
     
     var myServices: LORService = LORService()
     var gameCards: [Card]? = nil
     var selectedCard: Card? = nil
     var filteredCards: [Card]? = nil
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleView.titleLabel.text = NSLocalizedString("Choose Your Cards", comment: "")
+        titleView.titleLabel.text = NSLocalizedString("Card Gallery", comment: "")
         
-        let screenTitle = NSLocalizedString("Choose Cards", comment: "")
+        let screenTitle = NSLocalizedString("Gallery", comment: "")
         
         let backItem = UIBarButtonItem()
         backItem.title = screenTitle
@@ -55,7 +41,6 @@ class DeckBuilderController: UIViewController {
         
         setUp()
     }
-    
     
     func setUp() {
         setUpCollection()
@@ -86,44 +71,32 @@ class DeckBuilderController: UIViewController {
         }
     }
     
-    //TODO: Change the textfield.background color to the app background color
-    func setUpSearchBar(){
+    func setUpSearchBar() {
         if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
             textfield.textColor = UIColor.white
-            textfield.backgroundColor = UIColor.darkGray
         }
     }
     
-    
     func setUpFilterPin(){
-        makeCirle(view: self.selectedFilters)
-        self.selectedFilters.isHidden = true
-        self.labelFilter.isHidden = true
+        makeCirle(view: self.selectedFiltersView)
+        self.selectedFiltersView.isHidden = true
+        self.filterCountLabel.isHidden = true
     }
-    
     
     @IBAction func cartButton(_ sender: UIButton) {
         //TODO: segue to CardEditing
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToCardDetails" {
             if let vc = segue.destination as? CardDetailsViewController {
                 if let selectedCard = self.selectedCard {
                     vc.card = selectedCard
-                }
-            }
-        }
-        if segue.identifier == "goToDeckCart" {
-            if let vc = segue.destination as? DeckCartController {
-                if let card = self.gameCards {
-                    vc.cards = card
+                    vc.shouldShowCardButtons = false
                 }
             }
         }
     }
-    
     
     func makeCirle(view: UIView){
         view.layer.cornerRadius = view.frame.size.width/2
@@ -144,9 +117,7 @@ class DeckBuilderController: UIViewController {
     }
 }
 
-
-
-extension DeckBuilderController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -164,6 +135,7 @@ extension DeckBuilderController: UICollectionViewDelegate, UICollectionViewDataS
         if let gameCards = self.filteredCards {
             cell.cardSelect.card = gameCards[indexPath.row]
             cell.cardSelect.cardSetUp()
+            cell.cardSelect.hideCardAmountButtons()
         }
         cell.cardSelect.delegate = self
         
@@ -171,24 +143,18 @@ extension DeckBuilderController: UICollectionViewDelegate, UICollectionViewDataS
     }
 }
 
-
-extension DeckBuilderController: CardSelectDelegate {
+extension GalleryViewController: CardSelectDelegate {
     func goToCardDetails(for card: Card) {
         self.selectedCard = card
         performSegue(withIdentifier: "goToCardDetails", sender: nil)
     }
-
-    func addCard(for card: Card) {
-        print("Adicionou!!!")
-    }
     
-    func removeCard(for card: Card) {
-        print("Removeu!!!")
-    }
+    func addCard(for card: Card) {}
+    
+    func removeCard(for card: Card) {}
 }
 
-
-extension DeckBuilderController: UISearchBarDelegate {
+extension GalleryViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredCards = self.gameCards

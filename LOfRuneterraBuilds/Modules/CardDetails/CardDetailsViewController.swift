@@ -68,6 +68,8 @@ class CardDetailsViewController: UIViewController {
     
     var lorService: LORService = LORService()
     
+    var shouldShowCardButtons: Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -80,6 +82,10 @@ class CardDetailsViewController: UIViewController {
         transformInDynamic(label: regionLabel)
         transformInDynamic(label: monsterTypeLabel)
         transformInDynamic(label: rarityLabel)
+        
+        if !shouldShowCardButtons {
+            cardSelectImage.hideCardAmountButtons()
+        }
     }
     
     func consumeJsonCardInfos() {
