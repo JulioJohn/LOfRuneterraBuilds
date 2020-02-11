@@ -13,10 +13,11 @@
 		3E5DE5F223EC442E00452C91 /* DeckBuilderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DE5F123EC442E00452C91 /* DeckBuilderController.swift */; };
 		3E5DE5F423EC457200452C91 /* DeckCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5DE5F323EC457200452C91 /* DeckCollectionViewCell.swift */; };
 		3E76717623F1C70200973F36 /* CustomCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E76717523F1C70200973F36 /* CustomCard.xib */; };
-		3E76717823F1CAF700973F36 /* CustomCardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76717723F1CAF700973F36 /* CustomCardUIView.swift */; };
 		3E76717A23F1D89C00973F36 /* DeckCartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76717923F1D89C00973F36 /* DeckCartController.swift */; };
 		3E76717C23F1D8D500973F36 /* DeckCart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E76717B23F1D8D500973F36 /* DeckCart.storyboard */; };
 		3E76717E23F1F81300973F36 /* CustomCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76717D23F1F81300973F36 /* CustomCardTableViewCell.swift */; };
+		3E76718023F2D1B900973F36 /* TopBarUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76717F23F2D1B800973F36 /* TopBarUIView.swift */; };
+		3E76718223F2D1F000973F36 /* TopBarUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E76718123F2D1F000973F36 /* TopBarUIView.xib */; };
 		42052C6623E9939C009BDDF5 /* ExploreStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42052C6523E9939C009BDDF5 /* ExploreStoryboard.storyboard */; };
 		42052C6823E993D2009BDDF5 /* GalleryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42052C6723E993D2009BDDF5 /* GalleryStoryboard.storyboard */; };
 		42052C6A23E99493009BDDF5 /* DecksStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42052C6923E99493009BDDF5 /* DecksStoryboard.storyboard */; };
@@ -64,10 +65,11 @@
 		3E5DE5F123EC442E00452C91 /* DeckBuilderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckBuilderController.swift; sourceTree = "<group>"; };
 		3E5DE5F323EC457200452C91 /* DeckCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCollectionViewCell.swift; sourceTree = "<group>"; };
 		3E76717523F1C70200973F36 /* CustomCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCard.xib; sourceTree = "<group>"; };
-		3E76717723F1CAF700973F36 /* CustomCardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardUIView.swift; sourceTree = "<group>"; };
 		3E76717923F1D89C00973F36 /* DeckCartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCartController.swift; sourceTree = "<group>"; };
 		3E76717B23F1D8D500973F36 /* DeckCart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeckCart.storyboard; sourceTree = "<group>"; };
 		3E76717D23F1F81300973F36 /* CustomCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardTableViewCell.swift; sourceTree = "<group>"; };
+		3E76717F23F2D1B800973F36 /* TopBarUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarUIView.swift; sourceTree = "<group>"; };
+		3E76718123F2D1F000973F36 /* TopBarUIView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopBarUIView.xib; sourceTree = "<group>"; };
 		42052C6523E9939C009BDDF5 /* ExploreStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExploreStoryboard.storyboard; sourceTree = "<group>"; };
 		42052C6723E993D2009BDDF5 /* GalleryStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GalleryStoryboard.storyboard; sourceTree = "<group>"; };
 		42052C6923E99493009BDDF5 /* DecksStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DecksStoryboard.storyboard; sourceTree = "<group>"; };
@@ -228,8 +230,9 @@
 				E784252E23EDA8050026A28C /* TitleCell.xib */,
 				E784253023EDA8990026A28C /* TitleCellUIView.swift */,
 				3E76717523F1C70200973F36 /* CustomCard.xib */,
-				3E76717723F1CAF700973F36 /* CustomCardUIView.swift */,
 				3E76717D23F1F81300973F36 /* CustomCardTableViewCell.swift */,
+				3E76718123F2D1F000973F36 /* TopBarUIView.xib */,
+				3E76717F23F2D1B800973F36 /* TopBarUIView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				3E76717C23F1D8D500973F36 /* DeckCart.storyboard in Resources */,
 				42052C6823E993D2009BDDF5 /* GalleryStoryboard.storyboard in Resources */,
 				E784254223F1D9EA0026A28C /* DeckDetail.storyboard in Resources */,
+				3E76718223F2D1F000973F36 /* TopBarUIView.xib in Resources */,
 				42052C6623E9939C009BDDF5 /* ExploreStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,9 +463,9 @@
 				3E5DE5F023EB0C2E00452C91 /* CardSelectController.swift in Sources */,
 				E784253123EDA8990026A28C /* TitleCellUIView.swift in Sources */,
 				3E76717A23F1D89C00973F36 /* DeckCartController.swift in Sources */,
-				3E76717823F1CAF700973F36 /* CustomCardUIView.swift in Sources */,
 				E7EE475123F1EAB700AB27C1 /* Pack.swift in Sources */,
 				E7AE296E23E0979100EBD3A9 /* AppDelegate.swift in Sources */,
+				3E76718023F2D1B900973F36 /* TopBarUIView.swift in Sources */,
 				3E5DE5F223EC442E00452C91 /* DeckBuilderController.swift in Sources */,
 				E7AE297023E0979100EBD3A9 /* SceneDelegate.swift in Sources */,
 				E784252023EAE41D0026A28C /* Filter.swift in Sources */,
@@ -616,7 +620,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = LOfRuneterraBuilds/LOfRuneterraBuilds.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 447298T3PD;
+				DEVELOPMENT_TEAM = 97PTJ72QJZ;
 				INFOPLIST_FILE = LOfRuneterraBuilds/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
