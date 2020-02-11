@@ -158,11 +158,7 @@ class FilterViewController: UIViewController {
     @IBAction func regionShadow(_ sender: Any) {
         regionButtonSelected(button: shadowButton, region: .shadowIsles)
     }
-    
-    
-    
-    
-    
+
 }
 
 extension FilterViewController {

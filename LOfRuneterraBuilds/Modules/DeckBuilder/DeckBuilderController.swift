@@ -93,15 +93,18 @@ class DeckBuilderController: UIViewController {
         }
     }
     
+    
     func setUpFilterPin(){
         makeCirle(view: self.selectedFilters)
         self.selectedFilters.isHidden = true
         self.labelFilter.isHidden = true
     }
     
+    
     @IBAction func cartButton(_ sender: UIButton) {
         //TODO: segue to CardEditing
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToCardDetails" {
@@ -111,7 +114,15 @@ class DeckBuilderController: UIViewController {
                 }
             }
         }
+        if segue.identifier == "goToDeckCart" {
+            if let vc = segue.destination as? DeckCartController {
+                if let card = self.gameCards {
+                    vc.cards = card
+                }
+            }
+        }
     }
+    
     
     func makeCirle(view: UIView){
         view.layer.cornerRadius = view.frame.size.width/2
