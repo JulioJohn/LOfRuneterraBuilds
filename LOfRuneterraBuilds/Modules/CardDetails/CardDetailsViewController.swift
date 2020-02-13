@@ -108,6 +108,7 @@ class CardDetailsViewController: UIViewController {
             self.navegationTitle.title = card.name
         }
         self.navigationController?.navigationBar.barStyle = .black
+        self.navigationItem.backBarButtonItem?.tintColor = .white
     }
     
     func setupTableView() {

@@ -36,10 +36,8 @@ class DeckCartController: UIViewController {
     }
     
     @objc func send(){
-    
             
         let vc = UIStoryboard(name: "SaveDeck", bundle: .none).instantiateInitialViewController() as! SaveDeckViewController
-        
         
         self.present(vc, animated: true, completion: nil)
     }

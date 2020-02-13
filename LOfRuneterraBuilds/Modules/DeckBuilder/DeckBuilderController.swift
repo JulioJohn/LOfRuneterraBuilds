@@ -21,6 +21,7 @@ class DeckBuilderController: UIViewController {
     
     @IBOutlet weak var cardsAmount: UILabel! {
         didSet {
+            cardsAmount.text = "0/40"
             cardsAmount.font = UIFont.scaledFont(for: "OpenSans-SemiBold", size: 17)
             cardsAmount.adjustsFontSizeToFitWidth = true
         }
@@ -28,7 +29,7 @@ class DeckBuilderController: UIViewController {
 
     @IBOutlet weak var buttonLabel: UILabel! {
         didSet {
-            buttonLabel.text = NSLocalizedString("Show My Deck", comment: "")
+            buttonLabel.text = NSLocalizedString("Save My Deck", comment: "")
             buttonLabel.font = UIFont.scaledFont(for: "OpenSans-SemiBold", size: 17)
             buttonLabel.adjustsFontSizeToFitWidth = true
         }
@@ -38,6 +39,7 @@ class DeckBuilderController: UIViewController {
     var gameCards: [Card]? = nil
     var selectedCard: Card? = nil
     var filteredCards: [Card]? = nil
+    var counter = 0
     
     
     override func viewDidLoad() {
@@ -52,6 +54,7 @@ class DeckBuilderController: UIViewController {
         
         self.title = screenTitle
         self.navigationItem.backBarButtonItem = backItem
+        self.navigationItem.backBarButtonItem?.tintColor = .white
         
         setUp()
     }
@@ -64,6 +67,7 @@ class DeckBuilderController: UIViewController {
         setUpSearchBar()
         setupToHideKeyboardOnTapOnView()
     }
+    
     
     func setUpCollection() {
         self.collectionView.dataSource = self
@@ -179,11 +183,18 @@ extension DeckBuilderController: CardSelectDelegate {
     }
 
     func addCard(for card: Card) {
-        print("Adicionou!!!")
+        if (self.counter < 3){
+            self.counter = self.counter + 1
+//            self.collectionView.cardSelect.increaseButton.text = "\(counter)/3"
+//            self.buttonLabel.text = "\(counter)/3"
+        }
     }
     
     func removeCard(for card: Card) {
-        print("Removeu!!!")
+        if (self.counter > 0){
+            self.counter = self.counter - 1
+//            self.buttonLabel.text = "\(counter)/3"
+        }
     }
 }
 
