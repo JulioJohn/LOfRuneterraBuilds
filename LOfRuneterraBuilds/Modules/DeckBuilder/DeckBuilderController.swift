@@ -41,6 +41,8 @@ class DeckBuilderController: UIViewController {
     var filteredCards: [Card]? = nil
     var counter = 0
     
+    var packs: [Pack] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -183,11 +185,32 @@ extension DeckBuilderController: CardSelectDelegate {
     }
 
     func addCard(for card: Card) {
-        if (self.counter < 3){
-            self.counter = self.counter + 1
-//            self.collectionView.cardSelect.increaseButton.text = "\(counter)/3"
-//            self.buttonLabel.text = "\(counter)/3"
+        self.counter = self.counter + 1
+        var cardInsideDeck = false
+        
+        //verify if has the pack in the deck, then
+        for pack in self.packs {
+            if card.cardCode == pack.card.cardCode {
+                //exist the pack already
+                cardInsideDeck = true
+                
+                //less than 3 cards
+                if pack.quantity < 3 {
+                    //add card in pack
+                    print("Card added to deck!")
+                    pack.quantity += 1
+                }
+            }
         }
+        
+        //or create pack
+        if cardInsideDeck == false {
+            print("Card added to deck!")
+            let newPack = Pack(card: card, quantity: 1)
+            self.packs.append(newPack)
+        }
+            
+        //update UI here
     }
     
     func removeCard(for card: Card) {
