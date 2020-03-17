@@ -133,7 +133,7 @@ extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "deckBuilderCell", for: indexPath) as! DeckCollectionViewCell
         if let gameCards = self.filteredCards {
-            cell.cardSelect.card = gameCards[indexPath.row]
+            cell.cardSelect.pack?.card = gameCards[indexPath.row]
             cell.cardSelect.cardSetUp()
             cell.cardSelect.hideCardAmountButtons()
         }
@@ -144,14 +144,14 @@ extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataS
 }
 
 extension GalleryViewController: CardSelectDelegate {
-    func goToCardDetails(for card: Card) {
-        self.selectedCard = card
+    func goToCardDetails(for pack: Pack) {
+        self.selectedCard = pack.card
         performSegue(withIdentifier: "goToCardDetails", sender: nil)
     }
     
-    func addCard(for card: Card) {}
+    func addCard(for pack: Pack) {}
     
-    func removeCard(for card: Card) {}
+    func removeCard(for pack: Pack) {}
 }
 
 extension GalleryViewController: UISearchBarDelegate {

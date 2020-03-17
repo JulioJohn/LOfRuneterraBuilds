@@ -19,6 +19,30 @@ class Filter {
         self.cost = cost
     }
     
+    func filterForName(allCards: [Pack]) -> [Pack]? {
+        var filteredCards = allCards.filter({ (pack) -> Bool in
+            
+            if let name = self.name {
+                guard pack.card.name.contains(name) else { return false }
+            }
+            
+            if let region = self.region {
+                guard pack.card.region.contains(region) else { return false }
+            }
+        
+            if let cost = self.cost {
+                guard pack.card.cost == cost else { return false }
+            }
+            
+            return true
+        })
+        
+        print("Array filtrado com sucesso!")
+        print(filteredCards.count)
+        
+        return filteredCards
+    }
+    
     func filterForName(allCards: [Card]) -> [Card]? {
         var filteredCards = allCards.filter({ (card) -> Bool in
             

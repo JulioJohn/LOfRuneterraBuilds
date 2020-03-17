@@ -18,7 +18,7 @@ class CustomCardTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cardsAmount: UILabel!
     
-    var card: Card? = nil
+    var pack: Pack? = nil
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -50,15 +50,15 @@ class CustomCardTableViewCell: UITableViewCell {
     }
     
     func cardSetUp(){
-        if let cardImageName = self.card?.cardCode {
+        if let cardImageName = self.pack?.card.cardCode {
             self.cardImage.image = UIImage(named: cardImageName)
         }
         
-        if let cardName = self.card?.name {
+        if let cardName = self.pack?.card.name {
             self.cardName.text = cardName
         }
         
-        if let cardMana = self.card?.cost {
+        if let cardMana = self.pack?.card.cost {
             self.cardMana.text = "\(cardMana)"
         }
     }

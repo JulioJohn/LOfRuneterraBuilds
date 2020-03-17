@@ -10,7 +10,6 @@ import UIKit
 
 class CardDetailsViewController: UIViewController {
     
-    
     @IBOutlet weak var navegationTitle: UINavigationItem!
     @IBOutlet weak var titleCell: TitleCellUIView!
     @IBOutlet weak var cardSelectImage: CardSelectController!

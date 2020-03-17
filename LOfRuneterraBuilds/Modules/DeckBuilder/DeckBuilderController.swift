@@ -37,12 +37,12 @@ class DeckBuilderController: UIViewController {
     
     var myServices: LORService = LORService()
     var gameCards: [Card]? = nil
+    var gameCardsInPacks: [Pack]? = nil
     var selectedCard: Card? = nil
-    var filteredCards: [Card]? = nil
+    var filteredCards: [Pack]? = nil
     var counter = 0
     
     var packs: [Pack] = []
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,11 +84,23 @@ class DeckBuilderController: UIViewController {
                 return
             }
             self.gameCards = cards
-            self.filteredCards = self.gameCards
             
             DispatchQueue.main.async {
+                self.setupGameCardsInPacks()
                 self.collectionView.reloadData()
             }
+        }
+    }
+    
+    func setupGameCardsInPacks() {
+        var cardPacks: [Pack] = []
+        if let gameCards = self.gameCards {
+            for card in gameCards {
+                let newPack = Pack(card: card, quantity: 0)
+                cardPacks.append(newPack)
+            }
+            self.gameCardsInPacks = cardPacks
+            self.filteredCards = self.gameCardsInPacks
         }
     }
     
@@ -165,58 +177,105 @@ extension DeckBuilderController: UICollectionViewDelegate, UICollectionViewDataS
         return 0
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "deckBuilderCell", for: indexPath) as! DeckCollectionViewCell
+        
         if let gameCards = self.filteredCards {
-            cell.cardSelect.card = gameCards[indexPath.row]
+            let gameCardsAtRow = gameCards[indexPath.row]
+            cell.cardSelect.pack = gameCardsAtRow
             cell.cardSelect.cardSetUp()
         }
-        cell.cardSelect.delegate = self
         
+        cell.cardSelect.delegate = self
         return cell
     }
 }
 
 
 extension DeckBuilderController: CardSelectDelegate {
-    func goToCardDetails(for card: Card) {
-        self.selectedCard = card
+    func goToCardDetails(for pack: Pack) {
+        self.selectedCard = pack.card
         performSegue(withIdentifier: "goToCardDetails", sender: nil)
     }
 
-    func addCard(for card: Card) {
+    func addCard(for pack: Pack) {
+        //cards in deck counter
         self.counter = self.counter + 1
-        var cardInsideDeck = false
         
-        //verify if has the pack in the deck, then
-        for pack in self.packs {
-            if card.cardCode == pack.card.cardCode {
-                //exist the pack already
-                cardInsideDeck = true
-                
-                //less than 3 cards
-                if pack.quantity < 3 {
-                    //add card in pack
-                    print("Card added to deck!")
-                    pack.quantity += 1
+        if let gameCardsInPacks = self.gameCardsInPacks {
+            //verify if has the pack in the deck, then
+            for packOfCards in gameCardsInPacks {
+                if packOfCards.card.cardCode == pack.card.cardCode {
+                    
+                    //less than 3 cards
+                    if pack.quantity < 3 {
+                        //add card in pack
+                        print("Card added to deck!")
+                        
+                        //TODO: Remake this, repeting code, adding in pack and in the packOfCards, that is the pack of this view controller (necessary to update the view)
+                        packOfCards.quantity += 1
+                        pack.quantity = packOfCards.quantity
+                        
+                        //add the pack to the deck
+                        updateDeckPacks(for: pack.card, quantityToAdd: +1)
+                        
+                        //update UI here
+                        self.filteredCards = gameCardsInPacks
+                        collectionView.reloadData()
+                    }
                 }
             }
         }
-        
-        //or create pack
-        if cardInsideDeck == false {
-            print("Card added to deck!")
-            let newPack = Pack(card: card, quantity: 1)
-            self.packs.append(newPack)
-        }
-            
-        //update UI here
     }
     
-    func removeCard(for card: Card) {
-        if (self.counter > 0){
-            self.counter = self.counter - 1
-//            self.buttonLabel.text = "\(counter)/3"
+    //+1 to add and -1 to remove in quantityToAdd
+    func updateDeckPacks(for card: Card, quantityToAdd: Int) {
+        //if dont have card in deck
+        if self.packs.count == 0 {
+            if quantityToAdd > 0 {
+                //add
+                self.packs.append(Pack(card: card, quantity: 1))
+            } else {
+                //remove
+                return
+            }
+        }
+        
+        //if have cards in deck
+        for index in 0 ... self.packs.count - 1 {
+            let pack = packs[index]
+            
+            //search card
+            if pack.card.cardCode == card.cardCode {
+                //find and add or remove
+                pack.quantity += quantityToAdd
+                
+                //if negative remove
+                if pack.quantity <= 0 {
+                    self.packs.remove(at: index)
+                }
+                
+            }
+        }
+    }
+    
+    func removeCard(for pack: Pack) {
+        if let gameCardsInPacks = self.gameCardsInPacks {
+            for packOfCards in gameCardsInPacks {
+                if packOfCards.card.cardCode == pack.card.cardCode, packOfCards.quantity > 0 {
+                    //remove card
+                    packOfCards.quantity -= 1
+                    pack.quantity = packOfCards.quantity
+                    
+                    //add the pack to the deck
+                    updateDeckPacks(for: pack.card, quantityToAdd: -1)
+                    
+                    //update UI here
+                    self.filteredCards = gameCardsInPacks
+                    collectionView.reloadData()
+                }
+            }
         }
     }
 }
@@ -225,11 +284,11 @@ extension DeckBuilderController: CardSelectDelegate {
 extension DeckBuilderController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filteredCards = self.gameCards
+        filteredCards = self.gameCardsInPacks
 
         if searchText.isEmpty == false {
             let filter = Filter(name: searchText, regions: nil, cost: nil)
-            filteredCards = filter.filterForName(allCards: gameCards!)
+            filteredCards = filter.filterForName(allCards: gameCardsInPacks!)
         }
         
         collectionView.reloadData()

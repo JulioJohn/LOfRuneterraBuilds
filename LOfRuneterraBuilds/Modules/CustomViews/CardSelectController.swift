@@ -9,9 +9,9 @@
 import UIKit
 
 protocol CardSelectDelegate: class {
-    func addCard(for card: Card)
-    func removeCard(for card: Card)
-    func goToCardDetails(for card: Card)
+    func addCard(for pack: Pack)
+    func removeCard(for pack: Pack)
+    func goToCardDetails(for pack: Pack)
 }
 
 class CardSelectController: UIView {
@@ -26,7 +26,7 @@ class CardSelectController: UIView {
     weak var delegate: CardSelectDelegate?
     
     //TODO: add card
-    var card: Card? = nil
+    var pack: Pack? = nil
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -49,26 +49,27 @@ class CardSelectController: UIView {
     /// Change actual cards and update the imageView
     /// - Parameter card: Card
     func changeCard(card: Card) {
-        self.card = card
+        self.pack?.card = card
         self.cardSetUp()
     }
     
-    func cardSetUp(){
-        if let cardImageName = self.card?.cardCode {
-            self.cardImage.image = UIImage(named: cardImageName)
+    func cardSetUp() {
+        if let pack = pack {
+            self.cardImage.image = UIImage(named: pack.card.cardCode)
+            self.cardsAmount.text = "\(pack.quantity)/3"
         }
     }
     
     @IBAction func removeCard(_ sender: Any) {
-        delegate?.removeCard(for: card!)
+        delegate?.removeCard(for: pack!)
     }
     
     @IBAction func addCard(_ sender: Any) {
-        delegate?.addCard(for: card!)
+        delegate?.addCard(for: pack!)
     }
     
     @IBAction func goToCardDetail(_ sender: UIButton) {
-        delegate?.goToCardDetails(for: card!)
+        delegate?.goToCardDetails(for: pack!)
     }
     
     func hideCardAmountButtons() {
